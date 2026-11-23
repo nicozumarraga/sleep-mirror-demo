@@ -1,0 +1,52 @@
+"""Stub phrasebank used only when data/study/phrasebank.json is absent."""
+def T(text, styles=("any",), weight=1.0):
+    return {"text": text, "styles": list(styles), "weight": weight}
+
+STUB = {
+ "version": 1,
+ "slots": ["{epoch}","{stage}","{alt}","{yasa}","{conf}","{ch}","{n}","{uv}","{hz}","{sec}"],
+ "categories": {
+  "navigate": [T("next one."), T("okay, next epoch.", ["verbose"]), T("going to epoch {epoch}."), T("next.", ["terse"]), T("allora, avanti, epoch {epoch}.", ["nonnative_it"]), T("so, weiter, epoch {epoch}.", ["nonnative_de"])],
+  "open_epoch": [T("epoch {epoch}."), T("okay, epoch {epoch}, let's see."), T("here we are at {epoch}.", ["verbose"]), T("{epoch}.", ["terse"])],
+  "context_scan": [T("let me look at the surrounding epochs first."), T("zooming out to see the context here."), T("context first, what comes before and after.", ["verbose"]), T("context.", ["terse"])],
+  "obs_spindle": [T("i can see {n} spindles on {ch}, around {hz} hertz."), T("spindle here on {ch}, {n} of them."), T("{n} spindles, about {uv} microvolts on {ch}.", ["verbose"]), T("spindles.", ["terse"]), T("there are {n} spindle on {ch}, yes.", ["nonnative_it"])],
+  "obs_kcomplex": [T("there is a k complex on {ch}, about {uv} microvolts."), T("k complex, {n} of them."), T("i see {n} k complexes, large biphasic waves on {ch}.", ["verbose"]), T("k complex.", ["terse"])],
+  "obs_slow_waves": [T("slow waves, {n} percent of the epoch on {ch}."), T("delta waves about {n} percent, peak to peak {uv} microvolts."), T("slow wave activity {n} percent.", ["terse"]), T("i measure {uv} microvolts at {hz} hertz, so these are slow waves.", ["verbose"])],
+  "obs_alpha": [T("alpha rhythm on {ch}, around {hz} hertz."), T("posterior alpha, eyes closed wake probably."), T("alpha.", ["terse"])],
+  "obs_theta_low_amp": [T("low amplitude mixed frequency, theta, no alpha anymore."), T("theta activity, low voltage, around {hz} hertz."), T("theta low amplitude.", ["terse"])],
+  "obs_vertex": [T("vertex waves, {n} of them, sharp on {ch}."), T("i see a vertex sharp wave."), T("vertex.", ["terse"])],
+  "obs_sawtooth": [T("sawtooth waves on {ch}, typical for rem."), T("some sawtooth activity here."), T("sawtooth.", ["terse"])],
+  "obs_rem": [T("rapid eye movements, {n} of them on {ch}."), T("rems here, about {n}."), T("i count {n} rapid eye movements, sharp deflections on the eog.", ["verbose"]), T("rems.", ["terse"])],
+  "obs_sem": [T("slow rolling eye movements on {ch}."), T("slow eye movements, so n1 probably."), T("sems.", ["terse"])],
+  "obs_emg_low": [T("emg is very low, {uv} microvolts."), T("chin emg atonia, around {uv}."), T("low emg.", ["terse"])],
+  "obs_emg_high": [T("emg is high, {uv} microvolts, so awake."), T("muscle tone is up here, {uv}."), T("high emg.", ["terse"])],
+  "obs_arousal": [T("there is an arousal at about {sec} seconds, frequency shift on {ch}."), T("arousal starting {sec} seconds in."), T("arousal at {sec}.", ["terse"])],
+  "obs_artifact_movement": [T("movement artifact on {ch}, the whole signal is swamped."), T("lots of movement here."), T("movement.", ["terse"])],
+  "obs_artifact_electrode": [T("electrode pop on {ch}, sharp jump."), T("that's an electrode artifact on {ch}."), T("pop on {ch}.", ["terse"])],
+  "obs_artifact_sweat": [T("sweat artifact on {ch}, slow baseline drift."), T("slow wandering baseline on {ch}, sweat probably.")],
+  "obs_artifact_ecg": [T("ecg contamination on {ch}, i see the qrs."), T("heartbeat artifact on {ch}.")],
+  "rule_n3_20pct": [T("more than twenty percent slow waves, so n3."), T("less than twenty percent slow waves, so not n3 by the rule."), T("twenty percent rule.", ["terse"])],
+  "rule_n2_continuation": [T("previous epoch was n2, no arousal, so continuing n2."), T("n2 continuation rule applies here.", ["verbose"])],
+  "rule_rem_onset": [T("rem onset, low emg and rems, so rem starts here."), T("this is where rem begins.")],
+  "rule_arousal_3s": [T("the arousal is at least three seconds, that counts."), T("arousal shorter than three seconds, so ignoring it.")],
+  "rule_majority_epoch": [T("mixed epoch, so i score what covers the majority."), T("majority rule, going with {stage}.")],
+  "yasa_agree": [T("yasa says {yasa} with {conf}, i agree."), T("same as yasa, {yasa}."), T("yasa {yasa}, fine.", ["terse"]), T("yasa also says {yasa}, ok.", ["nonnative_de"])],
+  "yasa_disagree": [T("yasa says {yasa} at {conf} but i don't think so."), T("i disagree with yasa here, it says {yasa}."), T("not {yasa}.", ["terse"])],
+  "uncertain": [T("hmm, not sure about this one."), T("this is difficult."), T("uh, hard to say.", ["verbose"]), T("unclear.", ["terse"])],
+  "deliberate_between": [T("it could be {stage} or {alt}."), T("{stage} versus {alt}, hmm."), T("between {stage} and {alt}.", ["terse"])],
+  "decide_confident": [T("this is {stage}."), T("{stage}, clear."), T("definitely {stage}.", ["verbose"]), T("{stage}.", ["terse"])],
+  "decide_hedged": [T("i'll go with {stage}, but not fully sure."), T("probably {stage}."), T("let's say {stage}.", ["terse"])],
+  "self_correct": [T("no wait, that's not right."), T("actually, let me change that."), T("sorry, i misread this, going back.", ["verbose"]), T("no, wrong.", ["terse"])],
+  "comment_dictation": [T("adding a comment for this epoch."), T("comment, {stage} by context.", ["verbose"]), T("note.", ["terse"])],
+  "fatigue": [T("i'm getting a bit tired."), T("okay, need to speed up a little."), T("my eyes are tired.", ["verbose"])],
+  "off_task": [T("sorry, phone."), T("one second, someone is at the door."), T("what time is it, okay.")],
+  "break_start": [T("i'll take a short break."), T("break, back in a few minutes."), T("coffee break.", ["terse"])],
+  "break_end": [T("okay, back."), T("right, continuing."), T("back from the break.", ["verbose"])],
+  "session_open": [T("okay, starting the session, night {epoch}."), T("hello, starting now."), T("recording on, let's start.", ["terse"])],
+  "session_close": [T("that's it for now."), T("stopping here, i'll continue later."), T("done, saving.", ["terse"])],
+  "pii_mention": [T("this is the same pattern as for [NAME] at [INSTITUTION]."), T("like we do at [INSTITUTION].")]
+ },
+ "asr_confusions": {"n2": ["in two", "and two", "n to"], "n3": ["in three", "and three"], "n1": ["in one", "and one"], "rem": ["rim", "ream"], "spindles": ["spindels", "spin dolls"], "k complex": ["kay complex", "k comflex"], "yasa": ["yaser", "jasa", "yasha"], "emg": ["amg", "m g"], "eog": ["e o g", "eog's"], "arousal": ["a rousal", "the arousal"], "hertz": ["hurts", "hz"], "microvolts": ["micro volts", "microbolts"], "vertex": ["vertix", "verdex"], "sawtooth": ["saw tooth", "so tooth"], "alpha": ["alfa"], "theta": ["feta", "tita"]},
+ "hallucinations": ["thank you for watching.", "thanks for watching!", "you", "subtitles by the amara.org community", "bye."],
+ "fillers": {"en": ["uh", "um", "so", "okay", "hmm"], "it": ["allora", "eh", "ecco"], "de": ["also", "äh", "ja"]}
+}

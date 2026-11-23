@@ -1,0 +1,28 @@
+[
+ {
+  "annotator": "ann-01",
+  "night": "sub-7",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-01/sub-7/session-1.jsonl"
+  ],
+  "n_flagged": 151,
+  "n_labels": 158,
+  "duration_s": 121.8,
+  "kappa_vs_consensus": 0.78,
+  "acc_flagged": 0.85,
+  "acc_all": 0.88
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-7",
+  "role": "shared",
+  "sessions": [],
+  "n_flagged": 151,
+  "n_labels": 158,
+  "duration_s": 900.0,
+  "kappa_vs_consensus": 0.74,
+  "acc_flagged": 0.8,
+  "acc_all": 0.86
+ }
+]

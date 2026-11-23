@@ -1,0 +1,45 @@
+{
+ "ann-01": {
+  "id": "ann-01",
+  "role": "somnologist",
+  "years_exp": 12,
+  "native_language": "Italian",
+  "site": "[SITE_A]",
+  "verbosity": 0.8,
+  "filler_rate": 0.06,
+  "speed_s_per_epoch": [
+   20,
+   45
+  ],
+  "base_accuracy": 0.86,
+  "yasa_anchoring": 0.3,
+  "favorite_tools": [
+   "zoom",
+   "measure"
+  ],
+  "biases": {
+   "N1->W": 0.1
+  },
+  "style_notes": "Careful, verbose, measures often."
+ },
+ "ann-02": {
+  "id": "ann-02",
+  "role": "technician",
+  "years_exp": 3,
+  "native_language": "German",
+  "site": "[SITE_B]",
+  "verbosity": 0.4,
+  "filler_rate": 0.1,
+  "speed_s_per_epoch": [
+   10,
+   25
+  ],
+  "base_accuracy": 0.8,
+  "yasa_anchoring": 0.6,
+  "favorite_tools": [
+   "next_flagged"
+  ],
+  "biases": {},
+  "style_notes": "Fast, terse."
+ }
+}

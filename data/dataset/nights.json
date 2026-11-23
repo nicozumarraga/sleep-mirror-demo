@@ -1,0 +1,222 @@
+[
+ {
+  "night": "sub-3",
+  "n_epochs": 864,
+  "hours": 7.2,
+  "lights_off": "23:37",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 103,
+  "yasa_acc": 0.852,
+  "stage_ai_acc": 0.889
+ },
+ {
+  "night": "sub-7",
+  "n_epochs": 865,
+  "hours": 7.21,
+  "lights_off": "23:58",
+  "ahi_group": "healthy",
+  "role": "shared",
+  "n_flagged": 151,
+  "yasa_acc": 0.813,
+  "stage_ai_acc": 0.899
+ },
+ {
+  "night": "sub-12",
+  "n_epochs": 961,
+  "hours": 8.01,
+  "lights_off": "23:50",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 145,
+  "yasa_acc": 0.827,
+  "stage_ai_acc": 0.909
+ },
+ {
+  "night": "sub-18",
+  "n_epochs": 886,
+  "hours": 7.38,
+  "lights_off": "23:51",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 166,
+  "yasa_acc": 0.808,
+  "stage_ai_acc": 0.906
+ },
+ {
+  "night": "sub-21",
+  "n_epochs": 918,
+  "hours": 7.65,
+  "lights_off": "23:07",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 148,
+  "yasa_acc": 0.843,
+  "stage_ai_acc": 0.899
+ },
+ {
+  "night": "sub-26",
+  "n_epochs": 965,
+  "hours": 8.04,
+  "lights_off": "23:10",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 125,
+  "yasa_acc": 0.846,
+  "stage_ai_acc": 0.917
+ },
+ {
+  "night": "sub-33",
+  "n_epochs": 984,
+  "hours": 8.2,
+  "lights_off": "23:04",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 127,
+  "yasa_acc": 0.855,
+  "stage_ai_acc": 0.902
+ },
+ {
+  "night": "sub-38",
+  "n_epochs": 975,
+  "hours": 8.12,
+  "lights_off": "22:56",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 157,
+  "yasa_acc": 0.821,
+  "stage_ai_acc": 0.899
+ },
+ {
+  "night": "sub-41",
+  "n_epochs": 847,
+  "hours": 7.06,
+  "lights_off": "23:56",
+  "ahi_group": "healthy",
+  "role": "shared",
+  "n_flagged": 134,
+  "yasa_acc": 0.825,
+  "stage_ai_acc": 0.877
+ },
+ {
+  "night": "sub-47",
+  "n_epochs": 893,
+  "hours": 7.44,
+  "lights_off": "22:32",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 131,
+  "yasa_acc": 0.824,
+  "stage_ai_acc": 0.884
+ },
+ {
+  "night": "sub-52",
+  "n_epochs": 920,
+  "hours": 7.67,
+  "lights_off": "22:20",
+  "ahi_group": "apnea",
+  "role": "unique",
+  "n_flagged": 267,
+  "yasa_acc": 0.746,
+  "stage_ai_acc": 0.871
+ },
+ {
+  "night": "sub-58",
+  "n_epochs": 952,
+  "hours": 7.93,
+  "lights_off": "22:52",
+  "ahi_group": "apnea",
+  "role": "unique",
+  "n_flagged": 247,
+  "yasa_acc": 0.758,
+  "stage_ai_acc": 0.859
+ },
+ {
+  "night": "sub-64",
+  "n_epochs": 908,
+  "hours": 7.57,
+  "lights_off": "23:14",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 141,
+  "yasa_acc": 0.837,
+  "stage_ai_acc": 0.912
+ },
+ {
+  "night": "sub-69",
+  "n_epochs": 865,
+  "hours": 7.21,
+  "lights_off": "23:38",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 133,
+  "yasa_acc": 0.823,
+  "stage_ai_acc": 0.924
+ },
+ {
+  "night": "sub-75",
+  "n_epochs": 890,
+  "hours": 7.42,
+  "lights_off": "23:26",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 127,
+  "yasa_acc": 0.829,
+  "stage_ai_acc": 0.894
+ },
+ {
+  "night": "sub-81",
+  "n_epochs": 999,
+  "hours": 8.32,
+  "lights_off": "23:47",
+  "ahi_group": "apnea",
+  "role": "unique",
+  "n_flagged": 242,
+  "yasa_acc": 0.773,
+  "stage_ai_acc": 0.888
+ },
+ {
+  "night": "sub-88",
+  "n_epochs": 897,
+  "hours": 7.47,
+  "lights_off": "22:55",
+  "ahi_group": "healthy",
+  "role": "shared",
+  "n_flagged": 143,
+  "yasa_acc": 0.81,
+  "stage_ai_acc": 0.89
+ },
+ {
+  "night": "sub-94",
+  "n_epochs": 924,
+  "hours": 7.7,
+  "lights_off": "23:29",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 135,
+  "yasa_acc": 0.842,
+  "stage_ai_acc": 0.908
+ },
+ {
+  "night": "sub-103",
+  "n_epochs": 915,
+  "hours": 7.62,
+  "lights_off": "22:57",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 149,
+  "yasa_acc": 0.819,
+  "stage_ai_acc": 0.879
+ },
+ {
+  "night": "sub-117",
+  "n_epochs": 882,
+  "hours": 7.35,
+  "lights_off": "22:33",
+  "ahi_group": "healthy",
+  "role": "unique",
+  "n_flagged": 153,
+  "yasa_acc": 0.825,
+  "stage_ai_acc": 0.917
+ }
+]

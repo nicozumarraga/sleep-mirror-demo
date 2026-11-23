@@ -1,0 +1,5552 @@
+{
+ "version": 1,
+ "slots": [
+  "{epoch}",
+  "{stage}",
+  "{alt}",
+  "{yasa}",
+  "{conf}",
+  "{ch}",
+  "{n}",
+  "{uv}",
+  "{hz}",
+  "{sec}"
+ ],
+ "categories": {
+  "navigate": [
+   {
+    "text": "Next.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Next one.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Forward.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Back one.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, next flagged.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me jump to the next flagged epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Moving on.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Going back a bit.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me go back one, I want to see what came before.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Next flagged one, please.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Skip ahead, nothing to see in between.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's see what the tool gives me next.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, let me step back a couple of epochs.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, forward two epochs, I want the context.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alright, jumping to epoch {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me go to epoch {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Going to {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'll go back to epoch {epoch}, because I want to double check something I scored a while ago.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, avanti con il prossimo.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, andiamo avanti, next one.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, I go back one epoch.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, weiter zum nächsten.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, jetzt go to epoch {epoch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So, I go back one step.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "open_epoch": [
+   {
+    "text": "Epoch {epoch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{epoch}, okay.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, {epoch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Epoch {epoch}, YASA says {yasa}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, epoch {epoch}. Let's have a look.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Epoch {epoch}, let me see what we have here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So, {epoch}. Flagged, confidence {conf} percent.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alright, {epoch}, YASA gave it {yasa} but only {conf} percent.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, {epoch}. Okay.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's see, epoch {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This is {epoch}, low confidence on this one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, new one. {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Right, epoch {epoch}, what are you.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, so this is epoch {epoch}. YASA says {yasa} with {conf} percent, which is why it's flagged, so let me look at all the channels first.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Epoch {epoch}. Flagged because of low confidence, so I'm going to start with the EEG and then check the chin and the EOG.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, epoch {epoch}, YASA says {yasa}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, this one, {epoch}, it is flagged.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, vediamo. Epoch {epoch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, epoch {epoch}. YASA says {yasa}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, {epoch}, let's look at this.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So, jetzt epoch {epoch}, confidence is {conf}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "context_scan": [
+   {
+    "text": "Context.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Zoom out.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Wider window.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me zoom out and see the neighbours.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I want to see what happened before this one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "What's the epoch before doing? Let me look.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me look at the previous two epochs first.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, zooming out to get the context.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me see the surrounding epochs, it's easier to judge from there.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "What comes after this one? Let me peek.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pan left a bit, I want to see where this came from.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Checking the hypnogram, how does this fit in?",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me bring up the hypnogram and see the trend.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Previous epoch was {alt}, next one looks like {stage}. Okay.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Before this we had {alt}, I think, so there's some continuity.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me look at the spectrogram, that usually helps with these.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spectrogram on {ch}, let's see the sigma band.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I want to zoom out to two minutes, see the whole transition, because in isolation this epoch is hard to call.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me look at the neighbours first. Previous was {alt}, and if the next one is {stage} then this one is probably the transition, and that changes how I score it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, let me look at the epoch before.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, I zoom out, it's better with the context.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich schaue erst mal den Kontext, the epochs around.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, zoom out, then we see more.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So, let me see the hypnogram, jetzt.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_spindle": [
+   {
+    "text": "Spindle on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spindles, yes.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see spindles.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a spindle on {ch}, around {hz} hertz.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I count {n} spindles on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, spindles on the central leads, {n} of them.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Clear sleep spindle here on {ch}, definitely longer than half a second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That looks like a spindle, {hz} hertz, on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, is that a spindle? It's quite short.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me measure that, I think it's a spindle. Sigma range, {hz} hertz.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spindle activity on C3 and C4, that's N2 for me.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There is some sigma burst here, maybe {n} spindles, I'd say.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, spindle, good, that's my N2 marker.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's eleven to sixteen hertz, at least half a second, so yes, spindle.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No spindles that I can see on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I don't see any spindles, which is interesting.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So on {ch} there's a clear burst at about {hz} hertz, lasting more than half a second, spindle shaped waxing and waning, so I count it as a spindle.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm looking for spindles on the central derivations. I see {n}, they're a bit faint, but they have the right shape, so this supports N2.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, there is a spindle here on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, I see the spindles, {n} spindles, no?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, hier ist eine Spindel on {ch}, I think.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, spindles are there, {n} of them.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_kcomplex": [
+   {
+    "text": "K-complex.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "K complex on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a K-complex.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see a K-complex on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's a K-complex, well delineated negative sharp wave followed by a positive component.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "K-complex, and no arousal after it, so that's N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, K-complex here, {uv} microvolts or so.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, that could be a K-complex. Let me measure it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "A K-complex on {ch}, standing out from the background.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{n} K-complexes in this epoch, clear on the frontal leads.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Is it a K-complex or just a slow wave? The shape is sharp, so K-complex.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's one K-complex near the start, then nothing.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Looks like a K-complex but there's an arousal right after, hmm.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No K-complexes here that I can see.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a high amplitude biphasic wave on {ch}, negative sharp then slower positive, lasting over half a second. That is a K-complex, no question.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me look closer. This sharp negative deflection followed by a positive one, it stands out from the background, so I'm calling it a K-complex, which means N2.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, a K-complex, here on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, this looks like a K-complex, no?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ein K-Komplex, on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, K-complex, clear one.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_slow_waves": [
+   {
+    "text": "Slow waves.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Delta, lots of it.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves all over {ch}, big amplitude.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There are slow waves here, {uv} microvolts peak to peak.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, lots of delta. Let me measure the amplitude.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Measuring, {uv} microvolts, so above seventy five.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's a slow wave, {hz} hertz, and big enough.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow wave activity, I'd say about {n} percent of the epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, the slow waves are there but they're not so big. Maybe under seventy five.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Delta waves, yes, but amplitude is borderline.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Frontal slow waves, F3 and F4 are full of them.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Lots of slow wave activity but there's also a spindle in between.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Beautiful slow waves, textbook.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not many slow waves here, definitely less than before.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see high amplitude slow waves, around {hz} hertz, over seventy five microvolts, on the frontal leads. Let me estimate how much of the epoch they take up.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves are present, but they come in bursts. I'd say they cover roughly {n} percent of the epoch, so I need to think about the twenty percent rule.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, the slow waves, they are big here.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, lots of delta, {uv} microvolts.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Slow Waves, sehr deutlich on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, delta activity, big amplitude.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_alpha": [
+   {
+    "text": "Alpha.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha, eyes closed.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha rhythm on the occipital leads, {hz} hertz.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see alpha on {ch}, posterior dominant, so relaxed wake.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's alpha on O1 and O2, but it's attenuating.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha is fading here on {ch}, so this is sleep onset.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha attenuation, I'd say the alpha is below half the epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha more than fifty percent of the epoch on the occipital leads. That's wake.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, there's still some alpha at the start of the epoch, then it drops.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eyes closed alpha, okay, that's W.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha bursts, intermittent, not continuous.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No alpha rhythm here at all, replaced by low amplitude mixed frequency.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On {ch} I see a rhythm at about {hz} hertz, reactive, strongest posteriorly. That's alpha, and if it occupies more than half the epoch I should score wake.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The alpha is there at the start, but it fades out around the middle of the epoch. So by the majority rule, I'd call it N1, since alpha attenuates.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, there is alpha on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, the alpha is going away, no?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Alpha auf {ch}, ziemlich klar.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, alpha is attenuating, jetzt.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_theta_low_amp": [
+   {
+    "text": "Low amplitude theta.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Theta, mixed frequency.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low voltage, mixed.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low amplitude mixed frequency activity, mostly theta, four to seven hertz.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's all theta, low amplitude, on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Background is slowed, theta, {hz} hertz, no spindles.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low voltage, mixed frequency, that is N1 or REM background.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Theta activity replacing the alpha, so I'm thinking N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Theta, but is it really theta? Could be a bit of alpha drift.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The EEG is flat, low amplitude, about {uv} microvolts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This background is typical of N1, slowed, no spindles, no K-complexes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Theta bursts on {ch}, nothing else.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, low amplitude theta. Need the EOG and the chin for this one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The EEG shows low amplitude, mixed frequency activity with theta predominating, and no alpha, no spindles, no K-complexes. So the background is consistent with N1 or REM, and I need the chin and EOG to decide.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, low amplitude, theta mostly.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, it's a mixed frequency, low voltage.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Low voltage, mixed frequency, Theta mostly.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, kein Alpha, nur theta on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_vertex": [
+   {
+    "text": "Vertex waves.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Vertex sharp wave.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Vertex, N1.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see vertex sharp waves on {ch}, central, so N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Vertex waves, {n} of them, sharply contoured, under half a second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a vertex sharp wave on C3, C4. Typical N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sharp, surface negative, maximal at the vertex. Yes, vertex wave.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, vertex wave or K-complex? It's short and sharp, so vertex.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Vertex waves with theta background, that's N1 for me.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Vertex waves here, but they're not followed by spindles, so not N2 yet.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "A couple of vertex waves, {n}, nothing more.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not many vertex waves, but enough, I think.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On the central leads there are sharply contoured waves, shorter than half a second, with a theta background. These are vertex sharp waves, which fit N1, and since there are no spindles or K-complexes I won't call this N2.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, vertex waves, on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, this is a vertex wave, N1 I think.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Vertex-Wellen on {ch}, typisch N1.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, vertex sharp waves, {n}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_sawtooth": [
+   {
+    "text": "Sawtooth.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sawtooth waves.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Saw teeth on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sawtooth waves on the central leads, that's REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see sawtooth waves, {hz} hertz, triangular shape.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sawtooth waves right before the eye movements, nice.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There are sawtooth waves, which supports REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sawtooth, notched shape, two to six hertz. Yes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, are these sawtooth or just theta? The notching is there, so sawtooth.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No sawtooth waves, but that's not required for REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sawtooth waves plus REMs, easy REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The EEG has low amplitude activity with serrated, triangular waves in the two to six hertz range, maximal over the central region. Those are sawtooth waves, a supportive feature for stage R, together with the low chin tone.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, sawtooth waves, so REM.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, sawtooth, I see it on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Sägezahnwellen on {ch}, REM.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, sawtooth waves, clear.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_rem": [
+   {
+    "text": "REMs.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Rapid eye movements.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see REMs.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Rapid eye movements on the EOG, {n} of them.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There are REMs here, sharp, irregular, conjugate.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EOG shows rapid eye movements, with sharp initial deflection.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REMs, yes, {n} of them, in the second half.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eye movements, irregular, sharply peaked. That's rapid eye movements.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see a few REMs, but the chin is not that low, hmm.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REMs, okay, but are they real or just artefact? Looks conjugate, so real.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Rapid eye movements plus low chin, that's REM sleep.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EOG is active, but only {n} movements. Weak.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No rapid eye movements here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On the EOG there are irregular conjugate eye movements with a sharp initial deflection, lasting under half a second. These are REMs. With low chin EMG and low amplitude mixed frequency EEG, this is REM sleep.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, rapid eye movements, I see {n}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, REMs on the EOG, yes.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, schnelle Augenbewegungen, REMs, {n} of them.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, REMs on the EOG, deutlich.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_sem": [
+   {
+    "text": "Slow eye movements.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "SEMs.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Rolling eyes.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow eye movements on the EOG, so N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see slow eye movements, sinusoidal, about half a second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "SEMs, rolling, conjugate. That's drowsiness, sleep onset.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow eye movements, with alpha dropping. N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, slow eye movements, but no spindles, so N1 rather than N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EOG shows slow rolling movements, not sharp, so not REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow, regular, so not rapid. I'll say SEMs.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eyes are rolling, that fits N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No slow eye movements here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On the EOG I see slow, sinusoidal, conjugate eye movements, with an initial deflection lasting more than half a second. These are slow eye movements, typical for N1, and they help me tell N1 from REM here.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, slow eye movements on the EOG.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, the eyes are rolling, no? N1.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, langsame Augenbewegungen, N1.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, SEMs, rolling eyes.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_emg_low": [
+   {
+    "text": "Chin is low.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EMG low.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Atonia.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin EMG is low, lowest of the night, I'd say.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EMG tone is really low here, about {uv} microvolts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The chin is quiet, that fits REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low chin EMG, atonia, so that's REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin tone is lower than in the previous epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, chin is low but not flat. Borderline.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EMG baseline is low, good, nothing contaminating it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin EMG dropped, that's the REM onset marker.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The chin is low. Together with the eye movements, that decides it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The chin EMG is at its lowest level, basically flat, about {uv} microvolts, which is consistent with REM atonia. So combined with the low amplitude EEG, this pushes me towards stage R.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, the chin is very low.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, EMG low, so, REM probably.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, EMG ist niedrig, Atonie.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, the chin tone is low, jetzt.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_emg_high": [
+   {
+    "text": "EMG high.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin is active.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Muscle tone, high.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin EMG is high, {uv} microvolts. So not REM.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a lot of muscle activity on the chin.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The EMG is elevated, tone is clearly present.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin tone is high, that rules out REM for me.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Muscle artifact on the EMG, but also real tone.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin tone still present, so wake or N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EMG is burst-like, that's a movement.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The chin wakes up here, I think the patient is moving.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "High chin tone and alpha, that's wake.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, EMG is elevated but is that artifact? Let me check the EEG.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The chin EMG is clearly higher than in the surrounding epochs, around {uv} microvolts. That tells me the muscle tone is present, so this cannot be REM, and I need to decide between wake and N1.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, the chin is high, so not REM.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, lots of EMG here.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, EMG ist hoch, muscle tone is present.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, Kinn aktiv, so not REM.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_arousal": [
+   {
+    "text": "Arousal.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal here.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Possible arousal.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's an arousal, abrupt shift in frequency, alpha, then back.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal about {sec} seconds in, abrupt shift to faster activity.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Abrupt frequency shift at {sec} seconds. That's an arousal.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see an arousal, lasting at least three seconds.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha burst, theta, then faster activity. An arousal.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, is that an arousal? Short, maybe two seconds. Not enough.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal after stable sleep, so it counts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal in REM would need chin EMG increase as well.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "EMG goes up at the same time, so arousal in REM, yes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal here, but it's one event, not a full awakening.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Brief arousal at {sec} seconds, but the epoch is still sleep.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "At about {sec} seconds there's an abrupt shift in EEG frequency to alpha and faster, lasting longer than three seconds, after a stretch of stable sleep. That meets the arousal criteria, but one arousal doesn't change the stage by itself.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, an arousal, at {sec} seconds.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, there is an arousal here, I think.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ein Arousal bei {sec} Sekunden.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, abrupt frequency shift, arousal.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_artifact_movement": [
+   {
+    "text": "Movement artifact.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Movement.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Patient moved.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Movement artifact on {ch}, everything is wiped out.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Big movement here, all channels contaminated.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Body movement, I can't see the EEG under that.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The patient is moving, lots of EMG and EEG distortion.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's a movement artifact, not a real arousal.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Movement, lasting about {sec} seconds, then settles.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, movement for half the epoch, let me see the rest.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I see movement artifact at the start, clean afterwards.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Movement, so wake probably, if it's more than half.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a large movement artifact affecting several channels, EEG, EOG and chin. For about {sec} seconds I can't see the underlying activity, so I need to look at the clean part of the epoch and decide.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, there's movement, on {ch} too.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, the patient is moving.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Bewegungsartefakt, alle Kanäle.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, patient moved, big artifact.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_artifact_electrode": [
+   {
+    "text": "Electrode pop.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pop on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Bad electrode.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's an electrode pop on {ch}, sudden step.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Electrode artifact on {ch}, single channel, so not brain.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pop on {ch}, vertical spike, one channel only.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{ch} is losing contact, I think. Let me check the other leads.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Electrode pop, ignore {ch}, use the other side.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, {ch} looks bad. Switch to the contralateral channel.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Impedance issue on {ch}, noisy baseline.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The pop on {ch} looks like a K-complex at first, but it's just one channel.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Only on {ch}, so it's an artifact.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "There's a sudden vertical deflection on {ch} only, with no counterpart on the neighbouring leads. That's an electrode pop, so I'll ignore {ch} and score from the clean channels, like C3 or O1.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, electrode pop on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, {ch} is bad, no?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Elektrodenartefakt on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, pop on {ch}, ignore it.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_artifact_sweat": [
+   {
+    "text": "Sweat artifact.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sweat.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow drift.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's sweat artifact, slow sway on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Very slow oscillation on {ch}, below 0.5 hertz, that's sweat.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sweat artifact, baseline drifting up and down.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow drifting baseline, so not delta, just sweat.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, looks like slow waves but it's too slow. Sweat artifact.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sweat on the frontal leads, that looks like delta but it isn't.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "High pass filter at point five hertz would clean that up.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sweating, patient is warm, I guess.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On {ch} there's a very slow undulation, much slower than half a hertz, with a wandering baseline. This looks like sweat artifact, which can mimic slow waves, so I won't count it towards the twenty percent.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, sweat artifact on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, it's slow drift, sweat.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Schweißartefakt on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, slow drift, sweat.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "obs_artifact_ecg": [
+   {
+    "text": "ECG artifact.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Heartbeat on {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "ECG in the EEG.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "ECG artifact, regular spikes on {ch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I can see the heartbeat in the EEG, regular spikes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Regular periodic spikes, about one per second, that's ECG.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "ECG contamination on {ch}, a bit of a nuisance.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The QRS is leaking into {ch}, but it's regular.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, looks like sharp waves, but they're regular. ECG.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "ECG bleeding into the EOG, ignore.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pulse artifact, yes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On {ch} I see sharp deflections at a regular interval, about once per second, time locked with the cardiac rhythm. That's ECG artifact, not vertex waves or spikes, so I'll disregard it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, ECG artifact on {ch}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, the heartbeat is in the EEG.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, EKG-Artefakt on {ch}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, heartbeat in the EEG, regular.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "rule_n3_20pct": [
+   {
+    "text": "Twenty percent rule.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "N3 needs twenty percent.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "At least twenty percent.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "For N3 I need at least twenty percent slow waves in the epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves cover about {n} percent, so above twenty, N3.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves cover about {n} percent, under twenty. So not N3.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Twenty percent of thirty seconds is six seconds, let me count.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Six seconds of slow waves, at least. Hmm, I count maybe four.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow wave amplitude over seventy five microvolts, and over twenty percent. That's N3.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's borderline on the twenty percent rule. Hmm.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Is it twenty percent? Let me measure the slow waves one by one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Amplitude is fine, but the duration is short of twenty percent.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spindles can be present in N3, so they don't exclude it, but it's the slow waves that count.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The rule for N3 is that slow wave activity, so waves of at least seventy five microvolts peak to peak in the 0.5 to 2 hertz range, has to cover twenty percent or more of the epoch. I estimate {n} percent here, so that decides it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, the twenty percent rule, for N3.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, for N3 is twenty percent, and here is borderline.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, für N3 brauche ich zwanzig Prozent.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, twenty percent slow waves, then it's N3.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "rule_n2_continuation": [
+   {
+    "text": "N2 continuation rule.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Continue N2.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Keep it N2.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Previous epoch was N2, so by the continuation rule, this stays N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "N2 continuation rule applies here, no arousal, no K-complex, but low amplitude.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Without spindles or K-complexes, but after N2, we continue N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It continues as N2 until slow waves, arousal or REM shows up.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "N2 continues if no arousal and no major body movement.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, there's no spindle here, but the previous one was N2, so I keep N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Following a K-complex or spindle in the previous half, this stays N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Nothing new here, no reason to leave N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Epoch before is N2 with a spindle at the end, so N2 continues.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "By the AASM rules, if the previous epoch was N2, and this one has no spindles or K-complexes but also no slow waves, no arousal and no REM features, I continue to score N2. So I'll keep N2 here, even though it looks a bit empty.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, N2 continues from before.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, the previous was N2, so it is N2 also here.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, N2 continuation rule, previous was N2.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, no spindle but N2 continues.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "rule_rem_onset": [
+   {
+    "text": "REM onset rule.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REM onset.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Is REM starting?",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REM onset, so low chin, low amplitude EEG, no spindles.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "If there's low chin tone and REMs, start REM here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin dropped here, so REM starts at this epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low amplitude mixed frequency, low chin, REM begins.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The previous epoch was N2, now low chin and no spindles, so R starts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spindle in the first half and REM features after, so it's hard to say.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "A K-complex without arousal in the first half, so keep N2, and REM starts in the next one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REM starts when chin atonia and REMs appear together.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow eye movements here, no REMs, no low chin, so not REM yet.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "When a transition from N2 to REM happens, I look for the drop in chin EMG and low amplitude mixed frequency EEG. Here the chin drops at the beginning of the epoch and there are REMs, so I'd start stage R in this epoch.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, REM onset, the chin is going down.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, REM starts here, I think.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, REM beginnt hier, chin goes down.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, REM onset, low EMG, no spindles.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "rule_arousal_3s": [
+   {
+    "text": "Three second rule.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal needs three seconds.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ten seconds of sleep first.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "For an arousal I need three seconds of faster EEG.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal, after at least ten seconds of stable sleep.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This is less than three seconds, so not an arousal.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's {sec} seconds, so just about three. Counts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Abrupt shift, at least three seconds, after ten seconds of sleep. Yes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal has to follow at least ten seconds of sleep, but this is right at the start.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, two seconds. Doesn't meet the criteria.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "In REM, an arousal also needs a chin increase for at least one second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Only {sec} seconds, so it's too short to be an arousal.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "To score an arousal, I need an abrupt shift in EEG frequency, alpha, theta or above twelve hertz but not spindles, lasting at least three seconds, and preceded by at least ten seconds of stable sleep. This one is {sec} seconds, so I'm going to mark it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, for arousal is three seconds.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, this is under three seconds, not an arousal.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Arousal braucht drei Sekunden.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, three seconds minimum, and ten seconds sleep before.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "rule_majority_epoch": [
+   {
+    "text": "Majority rule.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Majority of the epoch.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "What dominates the epoch?",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Majority rule, what takes up more than half the epoch?",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The epoch is mixed, so I go with whatever occupies the majority.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Half the epoch is wake, half is N1. Hmm. Majority is wake.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha for the first ten seconds, then theta. So the majority is N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "More than half is N2, so N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Where the stages are mixed, I score the stage that occupies most of the epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, fifteen seconds of this, fifteen of that. Ugh.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's a transition epoch, and the majority is {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Mixed epoch, majority rule says {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This epoch contains features of two stages. The standard says to score the stage that occupies the majority of the epoch, so I estimate how many seconds belong to each. About two thirds look like {stage}, so I score that.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, the majority of the epoch is {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, majority rule, no? It's more {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, Mehrheitsregel, majority of the epoch.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, most of it is {stage}, so {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "yasa_agree": [
+   {
+    "text": "Agree with YASA.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Yeah, YASA's right.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA is fine.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I agree with YASA here, {yasa}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA says {yasa}, and I see the same thing.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, YASA got it. {yasa}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Yeah, I'd call it {yasa} as well.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA at {conf} percent, that's low, but I think it's right.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Fine, I'm with YASA on this one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Confidence is only {conf} percent but I'd agree, {yasa}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The algorithm is right, I can't argue with it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Looks like {yasa}, same as the pre-scoring.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA, you got lucky. {yasa}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA scored this as {yasa} with {conf} percent. Looking at the features myself, I get to the same conclusion, so I'll confirm it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, I agree with YASA, {yasa}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, YASA is right here.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich stimme YASA zu, {yasa}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, YASA is correct.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "yasa_disagree": [
+   {
+    "text": "Disagree with YASA.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No, not {yasa}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA is wrong.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I disagree with YASA, I'd say {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA says {yasa}, but I see {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not {yasa}. This looks like {stage} to me.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, YASA is off here. {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA says {yasa} with {conf} percent, but there's clearly no spindle, so I think {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I wouldn't go with {yasa}. It's more {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The algorithm missed the {stage} features.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA is overcalling {yasa} here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I think YASA is wrong, but only a bit. {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's not {yasa}, the chin tells me otherwise.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA says {yasa}, with {conf} percent confidence, but when I look at the channels I see features that don't fit. I think this is {stage}, so I'm going to change it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, I don't agree with YASA, is {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, no, YASA says {yasa}, but for me is {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich sehe das anders als YASA, {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, not {yasa}, I say {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "uncertain": [
+   {
+    "text": "Hmm.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not sure.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Unclear.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Tough one.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm not sure about this one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, that's hard to call.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I can't really tell.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This is ambiguous, honestly.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ugh, this is a hard one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me think. I don't know.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's not clear to me what this is.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Could be anything, to be honest.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm not convinced, whatever I pick.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Honestly, this is a coin flip.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, I keep going back and forth.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I really don't know about this one. Let me look again.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm honestly unsure here. The features are mixed, there's some of this and some of that, and none of them is clear enough to decide. Let me look at the other channels before I commit.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, I am not sure about this one.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, it's difficult, no?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich bin mir nicht sicher.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, genau, this is difficult.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "deliberate_between": [
+   {
+    "text": "{stage} or {alt}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, {alt}, hmm.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{alt} versus {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Is it {stage} or {alt}?",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So, {stage} or {alt}. Let me think.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Between {stage} and {alt}, hmm.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's either {stage} or {alt}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage} or {alt}. I need to look closer.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "On one hand it's {stage}, on the other hand {alt}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "For {stage} I'd need more, but {alt} doesn't fit either.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, {stage}, no, {alt}. No, wait.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me compare. {stage} would have more of it, {alt} would have less.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm torn between {stage} and {alt}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's {stage}, but the {alt} features are there too.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "YASA says {yasa}, but I'm thinking {stage} or {alt}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "So I'm weighing {stage} against {alt}. The spindles and the slow waves would say one thing, the amplitude and chin say another. Let me measure to see which one wins.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It could be {stage}, because of what I see on the central leads, but it could also be {alt}, because of the chin and the eye channels. I need to look at both again.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, {stage} or {alt}?",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, is {stage}, or maybe {alt}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, {stage} oder {alt}?",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, genau, {stage} or {alt}, jetzt.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "decide_confident": [
+   {
+    "text": "{stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, done.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This is {stage}, no doubt.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Clear {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Definitely {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Yeah, {stage}, easy one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'll label it {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Setting it to {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's {stage}. Moving on.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, this is {stage}, I'm confident.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Textbook {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, no question.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Labelling {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Right, {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Easy. {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Looking at everything together, EEG, chin and EOG, this is clearly {stage}, so I'm going to set the label to {stage} and move on.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, is {stage}, sure.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, {stage}, perfetto.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, das ist {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, {stage}, klar.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "decide_hedged": [
+   {
+    "text": "Probably {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Going with {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, I guess.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Say {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'll go with {stage}, but I'm not happy about it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Probably {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'd say {stage}, but don't hold me to it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, I guess. Moving on.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's go with {stage}, it's the best fit.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "It's more {stage} than {alt}, so {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, okay. {stage}. Probably.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "{stage}, with some doubts.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not sure, but {stage} feels more right.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'll put {stage}, and maybe come back later.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ok, {stage}, let's see if it works out.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Leaning {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I can't be completely sure, but the majority of the evidence points to {stage}, so I'll go with that, and I'll leave a comment in case someone wants to double check it.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, I say {stage}, maybe.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, probably {stage}, I think.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich nehme {stage}, wahrscheinlich.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, {stage}, I guess.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "self_correct": [
+   {
+    "text": "No wait.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, {stage}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Change that.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Undo.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No wait, that's {stage}, not {alt}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hold on, I misread that. {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Oops, wrong one. Undo.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me undo that.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Actually, no. It's {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, I said {alt}, I meant {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Wait, let me look at that again.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I take that back, it's {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hmm, I think I was wrong, let me change it to {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ah, I missed the chin. That makes it {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ah no, I clicked the wrong stage. Undo.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Whoops. Okay, fixing that.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I changed my mind, {stage}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Wait, I need to correct myself. I said {alt}, but now that I look at the {ch} channel again, I can see it's {stage}. Let me change the label.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "No, aspetta, is {stage}, not {alt}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, sorry, I change. {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Nein, warte, es ist {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, I correct that, it's {stage}.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "comment_dictation": [
+   {
+    "text": "Possible arousal, check resp channels.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Movement artifact, partial.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ambiguous N1 or W.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Low confidence, scored from {ch}.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Electrode pop on {ch}, used other side.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Spindles borderline, kept N2 by continuation rule.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Slow waves about {n} percent, borderline N3.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "REM onset, chin drops at {sec} seconds.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alpha fades mid epoch, scored N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Disagree with YASA, no spindles, chin high.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sweat artifact frontal, not true delta.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Transition epoch, majority rule applied.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Arousal at {sec} seconds, epoch kept as sleep.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Unclear, SEMs without alpha, chose N1.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "ECG contamination on {ch}, no effect on stage.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Revisit if time permits.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Could be W, movement for half the epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Mixed epoch: first half N2 with K-complex, second half low amplitude with SEM. Majority N2, flag for review.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Scored {stage} despite YASA {yasa}. Reasons: no sigma activity, chin tone present, alpha on O1 and O2.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Probably N2, spindle short, to check.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Not clear, chose {stage}.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Unsicher, N2 oder N3, slow waves {n} percent.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Chin EMG hoch, so not REM.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "fatigue": [
+   {
+    "text": "My eyes are going.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Tired.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Need a break soon.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "My eyes are starting to hurt.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'm getting tired.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm losing focus a bit.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "These epochs are all starting to look the same.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I think I'm getting sloppy. Let me re-read that.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Ugh, hour two. That's where the slow waves start to look like noise.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Need more coffee.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Wow, I can barely keep my eyes open.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let me stretch for a second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "My concentration is dropping, I should take a break soon.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I think I scored that without actually looking. Let me look again.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Too many hours in front of a screen.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm noticing I'm getting tired. I've been looking at these traces for a while, and I've started to doubt my own labels, so I should probably take a break before I make mistakes.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, I am a little tired now.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, my eyes, they are tired.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich werde müde.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, my eyes hurt, I need a pause.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "off_task": [
+   {
+    "text": "Sorry, one sec.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Phone.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Wait, what time is it?",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, my phone. One second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Is the recording still on?",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Someone is at the door. One second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "What was I doing? Right, epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, thinking about lunch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The screen is a bit bright, let me adjust it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That reminds me, I need to send an email.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Did I save the last one? I think so.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "My chair is terrible. Okay, back to it.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "The air conditioning is loud here.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Does this tool autosave? I assume so.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Funny, this patient sleeps better than I do.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That one was an actual snorer, I'd say.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, where was I.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I wonder who designed this interface, the scroll is tiny.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, I got distracted. I was thinking about something else entirely. Let me get back to it and focus on the epoch I was looking at.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, sorry, my phone.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, one moment, someone is calling.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, entschuldigung, mein Handy.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Moment, ich muss kurz was nachschauen.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "break_start": [
+   {
+    "text": "Break.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Coffee, back in five.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pausing.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'm taking a break.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's take five. Coffee.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pausing the recording, back in ten minutes.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Coffee time. Back soon.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I need a break, back in five.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Stopping here for a bit.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, going to stretch my legs, back soon.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Pausing now, my eyes need a rest.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Lunch break. Back in half an hour.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Break. Stopping the recording.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'm going to take a short break now, get some coffee and rest my eyes, and I'll continue from this epoch when I'm back.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, pausa, caffè, back in five.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, I take a break now.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich mache eine Pause, Kaffee.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, back in five minutes.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "break_end": [
+   {
+    "text": "Back.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'm back.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Resuming.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, back from the break.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Back. Where was I?",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Right, continuing.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Coffee done, let's go.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, recording again. Continuing from epoch {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Feeling better. Let's go on.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, break's over.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Back at epoch {epoch}.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's pick up where I left off.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alright, fresh eyes, let's see if this still looks the same.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I'm back. Eyes rested, coffee finished. Let me continue from epoch {epoch}, and take a quick look at the previous epoch for context.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, I'm back, let's continue.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, okay, ready again.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich bin zurück.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, weiter geht's.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "session_open": [
+   {
+    "text": "Okay, recording is on.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Recording. Let's start.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Starting.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, recording is on. Starting the night.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alright, I'm starting the session now.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, test, one two. Can you hear me? Good.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Recording started. Let's look at the first flagged epoch.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, new night. Let's see how many flagged epochs there are.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Right, starting. I'll think aloud as I go.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Good morning, session starting. Let me open the hypnogram first.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, let me start with the overview, and go to the first flagged one.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Let's start. Recording on, headphones on.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Hello, I'm starting the session. First, hypnogram.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, the recording is on. I'm going to start with the hypnogram to get an overview of the night, and then go through all the flagged epochs one by one, speaking out loud as I go.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, we start. Recording is on.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, okay, let's begin, first the hypnogram.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, die Aufnahme läuft, let's start.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, ich fange jetzt an.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "session_close": [
+   {
+    "text": "Done.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's all.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Finished, stopping recording.",
+    "styles": [
+     "terse"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, that was the last flagged epoch. I'm done.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's it for this night. Stopping recording.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Done. Let me check the hypnogram one last time.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, finished all the flagged epochs.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "All flagged epochs done. Stopping the recording.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "That's the end of the session. Thanks.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, wrapping up. Let me quickly look at the hypnogram.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Last one. Okay, finished. Recording off.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Alright, that's the night. Saving and stopping.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Okay, I've gone through all the flagged epochs. I'm going to look at the final hypnogram, check that it looks plausible, and then I'm stopping the recording.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, finished, I stop the recording.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, that's all for this night.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, ich bin fertig.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, that's the last one, stopping.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ],
+  "pii_mention": [
+   {
+    "text": "At [INSTITUTION] we'd call this N1 without hesitation.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "[NAME] would call this N2, I think.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "[NAME] always says to trust the chin.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "This reminds me of a case from [INSTITUTION].",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "In [CITY], we scored this differently.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "[NAME] taught me to check the EOG first.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "At [INSTITUTION], we use a different arousal rule, I think.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I remember [NAME] disagreeing about these transitions.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Back at [INSTITUTION], this would've been a K-complex, no discussion.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "[NAME] from the lab says YASA overcalls N2.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "My colleague [NAME] and I disagree on this, as usual.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "We had this at [INSTITUTION] last month, a patient with lots of movement.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'm at [INSTITUTION] and we have a different montage, to be fair.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I'll ask [NAME] about this one later.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Sorry, [NAME] is calling. One second.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "I did my training in [CITY], so I'm used to a slightly different style.",
+    "styles": [
+     "any"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "At [INSTITUTION] we have a rule of thumb, [NAME] always said that if you can't decide between N1 and wake, look at the EOG, and that works most of the time.",
+    "styles": [
+     "verbose"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Allora, at [INSTITUTION] we do like this.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Eh, [NAME] says always to check the chin.",
+    "styles": [
+     "nonnative_it"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Also, bei [INSTITUTION] machen wir das anders.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   },
+   {
+    "text": "Genau, [NAME] from [CITY] told me this once.",
+    "styles": [
+     "nonnative_de"
+    ],
+    "weight": 1.0
+   }
+  ]
+ },
+ "asr_confusions": {
+  "n1": [
+   "and one",
+   "in one",
+   "n one"
+  ],
+  "n2": [
+   "in two",
+   "and two",
+   "n to",
+   "end two"
+  ],
+  "n3": [
+   "and three",
+   "end three",
+   "in three"
+  ],
+  "rem": [
+   "ram",
+   "rim",
+   "rem's",
+   "wrem"
+  ],
+  "k complex": [
+   "cake complex",
+   "k-complex",
+   "kay complex",
+   "cape complex"
+  ],
+  "k-complex": [
+   "cake complex",
+   "kay complex"
+  ],
+  "spindles": [
+   "spindle's",
+   "spin tells",
+   "spindels"
+  ],
+  "spindle": [
+   "spin del",
+   "spindel",
+   "spinnle"
+  ],
+  "yasa": [
+   "yasser",
+   "yaza",
+   "yasa's",
+   "jasa"
+  ],
+  "emg": [
+   "e m g",
+   "eng",
+   "em g"
+  ],
+  "eog": [
+   "e o g",
+   "eo g",
+   "ee og"
+  ],
+  "eeg": [
+   "e e g",
+   "eeg's"
+  ],
+  "alpha": [
+   "al far",
+   "alfa",
+   "alpha's"
+  ],
+  "arousal": [
+   "a rousal",
+   "a rouse all",
+   "arousel"
+  ],
+  "hypnogram": [
+   "hypno gram",
+   "hypnagram",
+   "hip no gram"
+  ],
+  "epoch": [
+   "ebook",
+   "epic",
+   "epoc",
+   "a pock"
+  ],
+  "sawtooth": [
+   "saw tooth",
+   "sought tooth",
+   "sore tooth"
+  ],
+  "vertex": [
+   "vertex's",
+   "verdex",
+   "vortex"
+  ],
+  "delta": [
+   "del ta",
+   "delter"
+  ],
+  "theta": [
+   "data",
+   "tater",
+   "fate a"
+  ],
+  "sigma": [
+   "sigmund",
+   "sig ma"
+  ],
+  "microvolts": [
+   "micro volts",
+   "micro bolts",
+   "microbolts"
+  ],
+  "hertz": [
+   "hurts",
+   "hurt's",
+   "hertz's"
+  ],
+  "somnologist": [
+   "some knowledge list",
+   "somnologists"
+  ],
+  "chin": [
+   "shin",
+   "chin's"
+  ],
+  "occipital": [
+   "exhibital",
+   "occipetal"
+  ],
+  "c3": [
+   "c three",
+   "sea three",
+   "see three"
+  ],
+  "c4": [
+   "c four",
+   "sea four",
+   "see four"
+  ],
+  "o1": [
+   "o one",
+   "oh one"
+  ],
+  "o2": [
+   "o two",
+   "oh two"
+  ],
+  "f3": [
+   "f three",
+   "eff three"
+  ],
+  "f4": [
+   "f four",
+   "eff four"
+  ],
+  "artifact": [
+   "artefact",
+   "art effect"
+  ],
+  "electrode": [
+   "electro",
+   "electrode's"
+  ],
+  "slow waves": [
+   "slow ways",
+   "slow wave's"
+  ],
+  "sleep onset": [
+   "sleep unset"
+  ],
+  "nonrem": [
+   "non ram",
+   "non rem"
+  ],
+  "atonia": [
+   "a tonia",
+   "a tony a"
+  ],
+  "flagged": [
+   "flag it",
+   "flagged it"
+  ]
+ },
+ "hallucinations": [
+  "thank you for watching.",
+  "Thank you.",
+  "you",
+  "Thanks for watching!",
+  "subtitles by the amara.org community",
+  "Subtitles by the Amara.org community",
+  "Please subscribe to my channel.",
+  "Bye.",
+  "...",
+  "Untertitel im Auftrag des ZDF, 2020",
+  "Sottotitoli creati dalla comunità Amara.org",
+  "Thank you for watching, see you next time.",
+  "Transcribed by ESO, translated by —",
+  "MBC News"
+ ],
+ "fillers": {
+  "en": [
+   "uh",
+   "um",
+   "so",
+   "okay",
+   "like",
+   "you know",
+   "I mean",
+   "let's see",
+   "hmm",
+   "right",
+   "well",
+   "yeah",
+   "alright"
+  ],
+  "it": [
+   "allora",
+   "eh",
+   "cioè",
+   "ecco",
+   "dunque",
+   "boh",
+   "mmm",
+   "okay",
+   "va bene",
+   "diciamo"
+  ],
+  "de": [
+   "also",
+   "äh",
+   "ähm",
+   "genau",
+   "jetzt",
+   "na ja",
+   "gut",
+   "so",
+   "ja",
+   "hmm",
+   "sozusagen",
+   "okay"
+  ]
+ }
+}
