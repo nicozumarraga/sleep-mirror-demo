@@ -3,7 +3,7 @@
 
 Full nights for display: EEG/EOG band-passed 0.3-22 Hz at 50 Hz, chin EMG high-passed 10 Hz at 100 Hz, respiratory at 10 Hz
 (z-scored, a.u.). Each (epoch, channel) row is 8-bit mu-law encoded with its own scale (max |x| in uV). gzipped.
-This is a *display* copy; use the original EDFs (scripts/boas_download.sh) for any analysis.
+This is a *display* copy; use the original EDFs (setup.sh) for any analysis.
 
   data/dataset/sub-N/sub-N_signal.json    {"encoding":"mulaw8","mu":255,"n_epochs","channels":[{"name","fs","unit"}],"scale":[[per channel]...per epoch]}
   data/dataset/sub-N/sub-N_signal.bin.gz  epoch-major: for each epoch, for each channel, 30*fs int8 codes

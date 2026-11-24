@@ -18,6 +18,7 @@ The real study hasn't run yet. This repository shows what its data will look lik
 
 ```bash
 git clone https://github.com/nicozumarraga/sleep-mirror-demo && cd sleep-mirror-demo
+./setup.sh                  # optional: downloads the original EDF recordings (~3.8 GB) into raw/
 python3 -m http.server 8000
 # open http://localhost:8000/viewer/
 ```
@@ -92,8 +93,8 @@ Use these as they are.
 **Download the original full-resolution signal** (EDF, 256 Hz) for any signal work:
 
 ```bash
-./scripts/boas_download.sh            # the 20 nights → raw/boas/ (~3.8 GB, public OpenNeuro bucket, no account needed)
-./scripts/boas_download.sh sub-16     # or just some nights
+./setup.sh            # the 20 nights → raw/boas/ (~3.8 GB, public OpenNeuro bucket, no account needed)
+./setup.sh sub-16     # or just some nights
 ```
 
 The scripts in `scripts/` document how `data/` was generated: night selection, YASA, features, the session simulator and the signal export. They are there for provenance, and you don't need to run them.
