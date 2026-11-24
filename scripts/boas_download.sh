@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-# Download the selected BOAS PSG nights (EDF + events + channels) from OpenNeuro's public S3 bucket into raw/boas/.
-# ~160-200 MB per night, 5 parallel downloads; files are written to *.part and renamed when complete.
+# Download the original BOAS PSG recordings (EDF + events + channels) used in this repo from OpenNeuro's public
+# S3 bucket into raw/boas/ (~160-200 MB per night, ~3.8 GB for all 20). Nights come from data/dataset/selection.json.
+#   ./scripts/boas_download.sh            # all 20 nights
+#   ./scripts/boas_download.sh sub-16     # specific nights
+# Files are written to *.part and renamed when complete; rerunning skips finished files.
 set -euo pipefail
-cd "$(dirname "$0")/../raw/boas"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+mkdir -p "$ROOT/raw/boas" && cd "$ROOT/raw/boas"
 B=https://s3.amazonaws.com/openneuro.org/ds005555
+[ -s participants.tsv ] || curl -sfL --retry 3 -o participants.tsv "$B/participants.tsv"
+cp "$ROOT/data/dataset/selection.json" selection.json
 fetch() {
   s=$1; B=$2; mkdir -p "$s"
   for f in psg_events.tsv psg_channels.tsv psg_eeg.edf; do
@@ -13,4 +19,5 @@ fetch() {
   echo "$s done"
 }
 export -f fetch
-python3 -c "import json;print('\n'.join(json.load(open('selection.json'))['nights']))" | xargs -P 5 -I{} bash -c 'fetch {} '"$B"
+if [ $# -gt 0 ]; then printf '%s\n' "$@"; else python3 -c "import json;print('\n'.join(json.load(open('selection.json'))['nights']))"; fi \
+  | xargs -P 5 -I{} bash -c 'fetch {} '"$B"

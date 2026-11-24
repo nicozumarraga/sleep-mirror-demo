@@ -77,10 +77,29 @@ scripts/                 data pipeline (see below)
 viewer/                  static viewer (vanilla JS)
 ```
 
-The signal stored in the repo is a display copy: 8-bit and downsampled. For any analysis, rebuild from the original EDFs. That needs about 3.8 GB of downloads and roughly 5 minutes of processing:
+### Data: what's in the repo and what you download
+
+**In the repo: the shared reference, so we all work on the same thing.**
+
+- the BOAS consensus labels
+- the **YASA scores and flags**
+- the epoch features and detections
+- all simulated sessions and annotations
+- a display copy of the signal (8-bit, downsampled)
+
+Treat these committed files as fixed.
+
+**Download the original full-resolution signal** (EDF, 256 Hz) for any signal work:
 
 ```bash
-./scripts/build_all.sh   # select + download BOAS nights → real YASA + features → simulate sessions → validate → export signal
+./scripts/boas_download.sh            # the 20 nights → raw/boas/ (~3.8 GB, public OpenNeuro bucket, no account needed)
+./scripts/boas_download.sh sub-16     # or just some nights
+```
+
+**Optional: rebuild everything from the EDFs.** This **overwrites** the committed files, so only do it to audit or change the pipeline. Versions are pinned in `requirements.txt`.
+
+```bash
+./scripts/build_all.sh   # download → real YASA + features → simulate sessions → validate → export signal
 ```
 
 ## The open question

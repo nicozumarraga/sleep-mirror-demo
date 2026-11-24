@@ -18,5 +18,5 @@ for s in ok:
     seen.add(pid); pick.append(s)
     if len(pick) == 20: break
 pick.sort(key=lambda s: int(s[4:]))
-json.dump({"nights": pick, "shared": pick[:3] if False else [pick[i] for i in (2, 9, 16)]}, open(RAW / "selection.json", "w"), indent=1)
+json.dump({"nights": pick, "shared": [pick[i] for i in (2, 9, 16)]}, open(RAW / "selection.json", "w"), indent=1)
 print(len(ok), "eligible ->", pick)

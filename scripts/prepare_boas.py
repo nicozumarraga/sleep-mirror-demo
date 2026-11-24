@@ -197,7 +197,7 @@ def process(night, parts):
 
 
 def main():
-    sel = json.load(open(RAW / "selection.json"))
+    sel = json.load(open(DS / "selection.json"))  # committed list of nights
     parts = {r["participant_id"]: r for r in csv.DictReader(open(RAW / "participants.tsv"), delimiter="\t")}
     todo = sys.argv[1:] or sel["nights"]
     DS.mkdir(parents=True, exist_ok=True)

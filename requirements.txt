@@ -1,5 +1,7 @@
-mne>=1.6
-yasa>=0.6.5
-numpy
-scipy
-pandas
+yasa==0.8.1
+mne==1.13.2
+numpy==2.5.5
+scipy==1.18.1
+pandas==3.1.1
+scikit-learn==1.9.1
+lightgbm==4.7.0
