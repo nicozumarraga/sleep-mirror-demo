@@ -97,6 +97,13 @@ def load_night(night):
         r["arousal_onset_s"] = float(r["arousal_onset_s"]) if r["arousal_onset_s"] != "" else None
         r["artifact_channels"] = [c for c in r["artifact_channels"].split(",") if c]
         feats.append(r)
+    # EMG thresholds relative to the night (real chin-EMG amplitude varies a lot between recordings)
+    em = sorted(r["emg_rms"] for r in feats if r["emg_rms"] > 0) or [1.0]
+    q25, q80 = em[int(.25 * (len(em) - 1))], em[int(.80 * (len(em) - 1))]
+    for r in feats:
+        r["emg_low"] = 0 < r["emg_rms"] <= q25
+        r["emg_high"] = r["emg_rms"] >= q80
+        r["emg_q25"], r["emg_q80"] = q25, q80
     yas = []
     for r in csv.DictReader(open(d / f"{night}_yasa.tsv"), delimiter="\t"):
         r["epoch"] = int(r["epoch"]); r["confidence"] = float(r["confidence"]); r["flagged"] = int(r["flagged"])
@@ -531,9 +538,9 @@ class Job:
             add("obs_slow_waves", "slow", rng.choice(CAT_CHANS["obs_slow_waves"]), {"N3"} if pct >= 20 else {"N2"}, prio=1, pct=int(round(pct)))
         if f["rem_count"] > 0 and label == "R":
             add("obs_rem", "rem", "PSG_EOG", {"R"}, prio=1, n=f["rem_count"])
-        if f["emg_rms"] <= 6 and f["emg_rms"] > 0:
-            add("obs_emg_low", "emg", "PSG_EMG", {"R"}, prio=2, uv=int(round(f["emg_rms"])) if f["emg_rms"] >= 1 else 1)
-        if f["emg_rms"] >= 17:
+        if f["emg_low"]:
+            add("obs_emg_low", "emg", "PSG_EMG", {"R"}, prio=2, uv=max(1, int(round(f["emg_rms"]))))
+        if f["emg_high"]:
             add("obs_emg_high", "emg", "PSG_EMG", {"W"}, prio=2, uv=int(round(f["emg_rms"])))
         if f["spindles"] > 0:
             add("obs_spindle", "spindle", rng.choice(CAT_CHANS["obs_spindle"]), {"N2", "N3"}, prio=1, n=f["spindles"])
@@ -574,13 +581,13 @@ class Job:
                 out.append(dict(cat="obs_kcomplex", kind=under(("vertex", f["vertex_waves"] > 0), ("kcomplex", f["k_complexes"] > 0)), ch="PSG_F3", n=1, prio=2))
         elif label == "W":
             out.append(dict(cat="obs_alpha", kind=under(("alpha", f["rel_alpha"] > .25)), ch=rng.choice(CAT_CHANS["obs_alpha"]), prio=1))
-            out.append(dict(cat="obs_emg_high", kind="emg", ch="PSG_EMG", uv=int(max(f["emg_rms"], rng.uniform(14, 22))), prio=2))
+            out.append(dict(cat="obs_emg_high", kind="emg", ch="PSG_EMG", uv=max(1, int(round(max(f["emg_rms"], f["emg_q80"] * rng.uniform(1.0, 1.4))))), prio=2))
         elif label == "N1":
             out.append(dict(cat="obs_theta_low_amp", kind="theta", ch=rng.choice(CAT_CHANS["obs_theta_low_amp"]), prio=1))
             out.append(dict(cat=rng.choice(["obs_sem", "obs_vertex"]), kind="background", ch="PSG_EOG", n=1, prio=2))
         elif label == "R":
             out.append(dict(cat="obs_rem", kind=under(("sem", f["sem"] > 0)), ch="PSG_EOG", n=f["rem_count"] or rng.randint(2, 4), prio=1))
-            out.append(dict(cat="obs_emg_low", kind="emg", ch="PSG_EMG", uv=int(max(1, min(f["emg_rms"] if 1 <= f["emg_rms"] <= 6 else 0, 6)) or rng.randint(3, 5)), prio=2))
+            out.append(dict(cat="obs_emg_low", kind="emg", ch="PSG_EMG", uv=max(1, int(round(min(f["emg_rms"], f["emg_q25"])))), prio=2))
         return out
 
     def build_obs(self, e, label, via):

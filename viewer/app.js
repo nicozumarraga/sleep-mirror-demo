@@ -1,5 +1,5 @@
 'use strict';
-/* Sleep-Mirror synthetic study viewer. Vanilla JS + canvas. See SPEC.md for data formats. */
+/* Sleep-Mirror study viewer. Vanilla JS + canvas. See SPEC.md for data formats. */
 const Q = new URLSearchParams(location.search);
 const FIX = Q.has('fixture');
 const STUDY = FIX ? 'fixture/' : '../data/study/';
@@ -66,10 +66,35 @@ async function loadNight(n) {
       fetchText(`${DS}${n}/${n}_task-Sleep_acq-psg_events.tsv`), fetchText(`${DS}${n}/${n}_yasa.tsv`), fetchText(`${DS}${n}/${n}_epoch_features.tsv`)]);
     const evr = parseTSV(ev), yasa = parseTSV(ya), feat = parseTSV(fe);
     const cons = evr.map(r => CODE[r.stage_hum] || 'DISC');
+    await loadRealSignal(n, cons.length);
     return {n, ne: cons.length, cons, yasa, feat, ystage: yasa.map(r => r.yasa_stage), meta: D.nights[n] || {}};
   })();
   return p;
 }
+/* ---- real BOAS signal (display copy written by scripts/export_signals.py) ---- */
+const REALSIG = {}, DET = {};
+async function loadRealSignal(n, ne) {
+  const meta = await fetchJSON(`${DS}${n}/${n}_signal.json`); if (!meta) return;
+  try {
+    const r = await fetch(`${DS}${n}/${n}_signal.bin.gz`); if (!r.ok) return;
+    let buf = new Uint8Array(await r.arrayBuffer());
+    if (buf[0] === 0x1f && buf[1] === 0x8b) buf = new Uint8Array(await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+    const codes = new Int8Array(buf.buffer, buf.byteOffset, buf.byteLength), off = {}; let o = 0;
+    meta.channels.forEach((c, i) => { off[c.name] = {o, L: 30 * c.fs, i, fs: c.fs, unit: c.unit}; o += 30 * c.fs; });
+    const det = await fetchJSON(`${DS}${n}/${n}_detections.json`);
+    REALSIG[n] = {meta, codes, off, per: o, mu: meta.mu || 255}; if (det) DET[n] = det;
+  } catch (e) { console.warn('real signal unavailable for', n, e); }
+}
+function realChannel(n, ep, ch) {
+  const R = REALSIG[n], c = R && R.off[ch]; const x = new Float32Array(EPN); if (!c || ep < 0 || ep >= R.meta.n_epochs) return x;
+  const base = ep * R.per + c.o, sc = R.meta.scale[ep][c.i], mu = R.mu, k = c.L / EPN, lg = Math.log1p(mu);
+  const dec = q => Math.sign(q) * Math.expm1(Math.abs(q) / 127 * lg) / mu * sc;
+  for (let i = 0; i < EPN; i++) { const p = i * k, j = Math.floor(p), f = p - j, a = R.codes[base + j], b = j + 1 < c.L ? R.codes[base + j + 1] : a; x[i] = dec(a) * (1 - f) + dec(b) * f; }
+  return x;
+}
+const hasReal = n => !!REALSIG[n];
+function sigBanner(n) { return hasReal(n) ? 'Real BOAS PSG signal (OpenNeuro ds005555), display copy: EEG/EOG 50 Hz, EMG 100 Hz, 8-bit µ-law. Event marks = YASA detections / feature heuristics.' : 'Synthetic rendering from epoch_features — not real signal. Real data: BOAS EDF (OpenNeuro ds005555).'; }
+
 async function loadAnn(a, n) {
   const k = a + '_' + n; if (k in cache.ann) return cache.ann[k];
   const t = await fetchText(`${STUDY}annotations/${k}.tsv`);
@@ -112,6 +137,14 @@ const layoutCache = new Map(), sigCache = new Map();
 function epochLayout(night, ep, f) { // shared event timing across channels
   const k = night + '|' + ep; if (layoutCache.has(k)) return layoutCache.get(k);
   const r = rng(hash('L' + k)), L = {};
+  if (DET[night]) { // real detections
+    const t0 = ep * 30, inE = s => s >= t0 && s < t0 + 30, seen = new Set(), D = DET[night];
+    L.spindles = D.spindles.filter(s => inE(s[0]) && !seen.has(Math.round(s[0] * 2)) && seen.add(Math.round(s[0] * 2))).map(s => ({c: s[0] - t0 + s[1] / 2, dur: s[1]}));
+    L.kc = []; L.vertex = []; L.rem = D.rems.filter(inE).map(p => ({c: p - t0})); L.saw = []; L.blinks = [];
+    L.arO = f.arousal && f.arousal_onset_s !== '' ? +f.arousal_onset_s : null; L.arD = 3;
+    L.art = {kind: f.artifact || 'none', on: 0, dur: 30, chs: String(f.artifact_channels || '').split(',').map(s => s.trim()).filter(Boolean)};
+    layoutCache.set(k, L); return L;
+  }
   const spread = n => { const a = []; for (let i = 0; i < n; i++) a.push(2 + (26 * (i + r() * 0.8)) / Math.max(n, 1)); return a; };
   L.spindles = spread(f.spindles | 0).map(c => ({c, dur: 0.6 + r() * 0.9, hz: 12 + r() * 3}));
   L.kc = spread(f.k_complexes | 0); L.vertex = spread(f.vertex_waves | 0); L.rem = spread(f.rem_count | 0).map(c => ({c, s: r() < 0.5 ? -1 : 1}));
@@ -127,6 +160,7 @@ const REG = {F: {d: 1.2, t: 1, a: 0.8, s: 0.9, b: 1, kc: 1.2, v: 0.6, sw: 1.15},
 function synthChannel(night, ep, ch, f) {
   const key = night + '|' + ep + '|' + ch; if (sigCache.has(key)) return sigCache.get(key);
   if (sigCache.size > 600) sigCache.clear();
+  if (REALSIG[night]) { const x = realChannel(night, ep, ch); sigCache.set(key, x); return x; }
   const L = epochLayout(night, ep, f), r = rng(hash('S' + key)), x = new Float32Array(EPN), t = i => i / FS;
   const isEEG = /^PSG_[FCO][1-4]$/.test(ch), reg = isEEG ? REG[ch[4]] : null;
   const arch = L.art.chs.includes(ch) && L.art.kind !== 'none';
@@ -352,7 +386,7 @@ function buildJobDOM() {
   $('#main').innerHTML = `
   <div class="grid"><div id="left">
    <div class="card"><h3><span><a href="#/night/${n}">${n}</a> › <b>${a}</b>${job.role === 'shared' ? '<span class="badge">shared</span>' : ''}</span>
-     <span class="dim" style="font-weight:400;text-transform:none">${N.ne} epochs · ${N.meta.hours ?? ''} h · lights-off ${N.meta.lights_off ?? '?'} · ${N.meta.ahi_group ?? ''} · κ ${fmt(job.kappa_vs_consensus)} · acc<sub>flagged</sub> ${fmt(job.acc_flagged)} · acc<sub>all</sub> ${fmt(job.acc_all)} · YASA acc ${fmt(N.meta.yasa_acc)}</span>
+     <span class="dim" style="font-weight:400;text-transform:none">${N.ne} epochs · ${N.meta.hours ?? ''} h · lights-off ${N.meta.lights_off ?? '?'} · ${N.meta.age ? N.meta.age + " y " + N.meta.sex : ''} · κ ${fmt(job.kappa_vs_consensus)} · acc<sub>flagged</sub> ${fmt(job.acc_flagged)} · acc<sub>all</sub> ${fmt(job.acc_all)} · YASA acc ${fmt(N.meta.yasa_acc)}</span>
      <a class="btnlink" href="#/replay/${a}/${n}?s=0">▶ Replay session</a><span class="spacer"></span>
      <label>filter <select id="filt">${Object.entries(FILTERS).map(([k, v]) => `<option value="${k}">${v[0]}</option>`).join('')}</select></label>
      <button id="fprev" title="previous matching epoch (k)">◀</button><span id="fcnt" class="dim"></span><button id="fnext" title="next matching epoch (j)">▶</button></h3>
@@ -366,7 +400,7 @@ function buildJobDOM() {
    <div class="card"><h3><span>Signal</span><span id="mode"></span><button id="follow" hidden>follow playhead</button><span class="spacer"></span>
       <label><input type="checkbox" id="marks" checked> annotate synthesized events</label>
       <label>µV/half-lane <select id="scale"><option value="">viewport</option><option>25</option><option>50</option><option>75</option><option>100</option><option>150</option><option>250</option></select></label></h3>
-     <div class="warnbox" style="margin-bottom:6px">Synthetic rendering from epoch_features — not real signal. Real data: BOAS EDF (OpenNeuro ds005555).</div>
+     <div class="warnbox" style="margin-bottom:6px">${sigBanner(n)}</div>
      <div class="chips" id="chips"></div><canvas id="sig"></canvas><div id="info"></div></div>
   </div>
   <div id="right"><div class="card">
@@ -787,7 +821,7 @@ async function openNight(n) {
   const annRows = jobs.map(j => { const p = D.annotators[j.annotator] || {}; return `<tr class="click" data-h="#/job/${j.annotator}/${n}"><td><b>${j.annotator}</b> <span class="dim">${esc(p.role || '')}</span></td><td>${fmt(j.kappa_vs_consensus)}</td><td>${fmt(j.acc_flagged)}</td><td>${fmt(j.acc_all)}</td><td>${j.n_labels ?? '–'}</td><td>${mmss(j.duration_s)}</td><td>${(j.sessions || []).length}</td><td><a href="#/replay/${j.annotator}/${n}">▶ replay</a> · <a href="#/job/${j.annotator}/${n}">trajectory →</a></td></tr>`; }).join('');
   main.innerHTML = `
   <div class="card"><h3><span><b>${n}</b>${m.role === 'shared' ? '<span class="badge">shared · all annotators</span>' : ''}</span>
-   <span class="dim" style="font-weight:400;text-transform:none">${N.ne} epochs · ${m.hours ?? ''} h · lights-off ${m.lights_off ?? '?'} · ${m.ahi_group ?? ''}</span></h3>
+   <span class="dim" style="font-weight:400;text-transform:none">${N.ne} epochs · ${m.hours ?? ''} h · lights-off ${m.lights_off ?? '?'} · ${m.age ? m.age + " y " + m.sex : ''}</span></h3>
    <div class="kpis">
     <div><div class="kv1">${st.nflag}</div><div class="dim">flagged epochs</div></div>
     <div><div class="kv1">${pct(st.pct)}</div><div class="dim">of the night flagged</div></div>

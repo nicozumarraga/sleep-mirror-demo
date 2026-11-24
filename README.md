@@ -1,4 +1,4 @@
-# Sleep-Mirror demo: synthetic think-aloud sleep-scoring sessions
+# Sleep-Mirror demo: simulated think-aloud scoring sessions on real BOAS nights
 
 **Project Mirror** is building an LLM co-pilot for sleep scoring that learns *how* experts score PSG recordings, not just the final labels.
 Sleep experts score nights from a public dataset in a web annotation tool while thinking aloud. We log their speech, every interface action and their final labels.
@@ -9,7 +9,10 @@ The plan is to use these recordings to:
 
 The agents would act through the same tools as the human experts.
 
-This repository is a **fully synthetic mock** of what that study will produce. It exists so you can get a feel for the data before any real recordings exist. No real participants, voices or EEG are included.
+The real study hasn't run yet. This repository shows what its data will look like:
+
+- **Real:** 20 real PSG nights from BOAS, with the real expert consensus labels and the real YASA pre-scoring that decides which epochs the experts must review.
+- **Simulated:** the annotation sessions on top of those nights, from 5 annotators: speech, tool calls, UI events and labels.
 
 ## Quick start
 
@@ -19,7 +22,7 @@ python3 -m http.server 8000
 # open http://localhost:8000/viewer/
 ```
 
-No dependencies beyond Python 3 and a browser.
+No dependencies beyond Python 3 and a recent browser. The repository is about 260 MB, mostly the compressed signal.
 
 The viewer has four levels:
 
@@ -27,46 +30,57 @@ The viewer has four levels:
 |---|---|
 | **Overview** | Nights ranked by how much YASA left to the annotators, per-annotator agreement, confusion matrix, inter-rater agreement on the shared nights |
 | **Night** | YASA uncertainty profile (hypnodensity, confidence vs. flag threshold, flagged share over the night), every annotator's hypnogram against the consensus, why epochs were flagged |
-| **Trajectory** | One annotator × night: hypnograms, session timeline (speech / tools / UI / pauses), synthetic signal, and the raw event log as a chat-like feed |
-| **▶ Replay** | A simulated annotation app replaying one session: viewport, toolbar actions, cursor, labels being set, and the Whisper transcript as speech bubbles |
+| **Trajectory** | One annotator × night: hypnograms, session timeline (speech / tools / UI / pauses), the real PSG signal, and the raw event log as a chat-like feed |
+| **▶ Replay** | A simulated annotation app replaying one session on the real signal: viewport, toolbar actions, cursor, labels being set, and the transcript as speech bubbles |
 
-## The simulated study
+## What is real and what is simulated
 
-- **Dataset:** [BOAS](https://openneuro.org/datasets/ds005555/versions/1.1.3) (OpenNeuro ds005555, CC0). It contains 128 PSG nights with a 3-scorer consensus label per 30-second epoch (`stage_hum`).
-- **Pre-scoring:** YASA scores every epoch. Epochs with confidence below **0.60** are **flagged**, and the expert must score them. They may also correct any other epoch.
-- **Scale:** **5 annotators × 20 nights**. 3 nights are scored by all five, for inter-rater agreement. The other 17 are split across the annotators, giving **32 scoring jobs** and about 46 h of sessions.
-- **What gets logged per session:**
-  - Whisper transcript segments with word timestamps, ASR confidences and redaction tokens
-  - VACP tool calls and their results (`goto_epoch`, `zoom`, `toggle_channel`, `measure`, `set_label`, `undo`, …)
-  - UI dwell and mouse events
-  - breaks
-  - the final labels
-- **Built-in messiness:** the data is deliberately imperfect in the ways we expect real data to be:
-  - ASR errors, fillers and non-native speech
-  - silence hallucinations
-  - fatigue and anchoring on YASA
-  - self-corrections and revisits
-  - epochs scored without speaking
-  - speech that doesn't line up exactly with what is on screen
+| Real (BOAS, OpenNeuro ds005555, CC0) | Simulated |
+|---|---|
+| PSG signals of 20 nights from 20 different participants (EEG F3–O2, EOG, chin EMG, respiration) | 5 annotator personas |
+| 3-scorer consensus labels per 30-second epoch (`stage_hum`) and BOAS's own model labels (`stage_ai`) | Think-aloud speech as Whisper transcripts, including ASR errors, fillers, non-native speech, hallucinations and redactions |
+| **YASA** pre-scoring: per-epoch probabilities and confidence; the 12.7% of epochs below 0.60 confidence are flagged | VACP tool calls and UI dwell/mouse events, with timings, breaks, fatigue, YASA anchoring and undo |
+| Per-epoch descriptors computed from the signal: band powers, plus YASA's spindle, slow-wave and REM detectors | Each annotator's final labels |
+| `measure` results in the logs, computed from the real signal | |
+| Participant age, sex and BMI | |
+
+**Study setup** (scaled down from the protocol):
+
+- 5 annotators and 20 nights.
+- 3 nights are shared, so all five annotators score them and inter-rater agreement can be measured.
+- The other 17 nights are split across the annotators.
+- That gives 32 scoring jobs and about 37 h of simulated sessions.
+- The simulated annotators score every flagged epoch and sometimes correct a confident YASA error.
+
+**Some numbers from the real data:**
+
+- Real YASA agrees with the consensus 79% of the time on average. That ranges from 54% to 90% depending on the night.
+- Many of YASA's errors are *confident* ones, so they are never flagged for review.
+- For comparison, BOAS's own model reaches 87% agreement.
 
 ```
-SPEC.md                  full schema of every file
-data/dataset/            20 BOAS-like nights: consensus + BOAS-AI labels, per-epoch signal descriptors, YASA probs + flags
-data/study/
-  assignment.json        who scored which night
+SPEC.md                  schema of every file
+data/dataset/            20 real BOAS nights
+  sub-N/…_events.tsv       BOAS consensus (stage_hum) + BOAS model (stage_ai)
+  sub-N/…_yasa.tsv         YASA probabilities, confidence, flag
+  sub-N/…_epoch_features.tsv  per-epoch descriptors from the real signal
+  sub-N/…_detections.json  YASA spindle / slow-wave / REM detections
+  sub-N/…_signal.*         compact display copy of the PSG (see SPEC.md)
+data/study/              simulated annotation study
+  assignment.json          who scored which night
   sessions/<ann>/<night>/session-<k>.jsonl   raw event logs
   annotations/<ann>_<night>.tsv              final per-epoch labels
-  index.json             job list + summary metrics
-  annotators.json        simulated personas = the generator's hidden variables (see caveats)
-  phrasebank.json        think-aloud template bank used by the generator
-scripts/                 generators + consistency checks (stdlib Python, seeded)
+  index.json               job list + summary metrics
+  annotators.json          simulated personas = the generator's hidden variables
+  phrasebank.json          think-aloud template bank used by the generator
+scripts/                 data pipeline (see below)
 viewer/                  static viewer (vanilla JS)
 ```
 
-To regenerate everything, run:
+The signal stored in the repo is a display copy: 8-bit and downsampled. For any analysis, rebuild from the original EDFs. That needs about 3.8 GB of downloads and roughly 5 minutes of processing:
 
 ```bash
-python3 scripts/gen_nights.py && python3 scripts/gen_trajectories.py && python3 scripts/validate.py
+./scripts/build_all.sh   # select + download BOAS nights → real YASA + features → simulate sessions → validate → export signal
 ```
 
 ## The open question
@@ -86,14 +100,14 @@ A short write-up, sketches or a small prototype are all welcome.
 
 ## Caveats
 
-- **The data is synthetic.** The schema is realistic, but the clinical and statistical realism is only approximate. Don't draw clinical conclusions from it.
-- **There are no raw signals.** Each epoch has a set of feature descriptors (`*_epoch_features.tsv`), and the viewer renders a synthetic waveform from them. In the real study, agents see the BOAS EDF signals through tools.
-- **`annotators.json` holds the simulation's latent parameters**, such as accuracy and YASA anchoring. A real study would not have them, so treat them as hidden when designing anything.
-- **The think-aloud text is templated.** It refers to features that really are in the epoch, but it is not always the true reason for the label.
+- **The annotators are simulated.** Their speech is templated. It refers to features computed from the real epoch, but it is not always the true reason for the label, and it is no substitute for real expert reasoning.
+- **Some feature columns are heuristics, not validated scoring.** This applies to K-complex and vertex-wave candidates, sawtooth, slow eye movements, arousals and artifacts (see `scripts/prepare_boas.py`).
+- **`annotators.json` holds the simulation's latent parameters**, such as accuracy and YASA anchoring. A real study would not have them, so treat them as hidden.
 
 ## References
 
-- Bitbrain (2026). *BOAS dataset*, OpenNeuro ds005555.
+- Bitbrain (2026). *The Bitbrain Open Access Sleep (BOAS) dataset*, OpenNeuro ds005555, CC0.
+- Esparza-Iaizzo et al. (2026). *Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea.* Comput. Biol. Med.
 - Vallat & Walker (2021). *An open-source, high-performance tool for automated sleep staging (YASA).* eLife.
 - Stähle et al. (2026). *VACP: Visual Analytics Context Protocol.* IEEE VIS.
 - Zumarraga et al. (2026). *TimeRLM: Recursive language models enable precise anomaly localization in long-context time-series.* arXiv:2608.03391.

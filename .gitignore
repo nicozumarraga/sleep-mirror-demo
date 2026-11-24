@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 data/study/phrasebank.stub.json
+.venv/
+raw/

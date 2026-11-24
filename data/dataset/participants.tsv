@@ -1,21 +1,21 @@
-participant_id	age	sex	bmi	pid	ahi_group
-sub-3	23	F	22.7	18	healthy
-sub-7	29	F	19.6	14	healthy
-sub-12	29	F	19.5	58	healthy
-sub-18	56	M	23.9	1	healthy
-sub-21	68	M	33.3	42	healthy
-sub-26	60	F	21.4	83	healthy
-sub-33	61	F	19.2	73	healthy
-sub-38	64	F	24.2	49	healthy
-sub-41	30	M	33.1	60	healthy
-sub-47	71	M	30.5	32	healthy
-sub-52	41	M	27.5	67	apnea
-sub-58	31	F	31.2	83	apnea
-sub-64	59	F	20.2	90	healthy
-sub-69	55	F	33.6	15	healthy
-sub-75	57	F	32.4	29	healthy
-sub-81	67	M	20.1	43	apnea
-sub-88	52	F	21.0	51	healthy
-sub-94	45	F	27.0	49	healthy
-sub-103	29	M	22.4	98	healthy
-sub-117	43	F	30.6	5	healthy
+participant_id	age	sex	bmi	pid
+sub-7	33	F	22	5
+sub-9	32	M	26.6	90
+sub-16	n/a	F	26.8	11
+sub-19	67	F	27.5	93
+sub-26	25	M	27.5	18
+sub-28	22	F	24.7	20
+sub-29	23	F	n/a	21
+sub-30	31	M	21	94
+sub-31	36	F	21.3	95
+sub-40	67	M	23.6	86
+sub-42	69	M	26	84
+sub-47	82	F	27.8	87
+sub-53	64	F	24.9	88
+sub-104	28	F	23.4	72
+sub-110	70	M	25.6	96
+sub-115	65	M	25.1	98
+sub-119	62	F	26.4	99
+sub-121	67	F	26	100
+sub-125	32	M	21.7	104
+sub-127	22	M	22.3	107

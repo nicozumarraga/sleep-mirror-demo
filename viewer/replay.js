@@ -103,7 +103,7 @@ function rpBuildDOM() {
   <canvas id="rpScrub" class="rp-scrub"></canvas>
   <div class="rp-wrap">
    <div class="rp-app" id="rpApp">
-    <div class="rp-title"><span class="dots"><i></i><i></i><i></i></span><b>VACP · Sleep Scorer</b><span class="dim">${R.n} · ${R.N.ne} epochs · ${m.ahi_group || ''}</span><span class="spacer"></span>
+    <div class="rp-title"><span class="dots"><i></i><i></i><i></i></span><b>VACP · Sleep Scorer</b><span class="dim">${R.n} · ${R.N.ne} epochs · ${m.age ? m.age + " y " + m.sex : ''}</span><span class="spacer"></span>
       <span class="dim" id="rpProg"></span><span class="rec" id="rpRec">● REC</span><span class="mono dim" id="rpWall"></span></div>
     <div class="rp-nav"><canvas id="rpNav"></canvas></div>
     <div class="rp-body">
@@ -125,7 +125,7 @@ function rpBuildDOM() {
    </div>
    <div class="rp-chat card"><h3>Think-aloud · Whisper transcript <span class="spacer"></span><label><input type="checkbox" id="rpShowTools" checked> actions</label></h3><div id="rpFeed"></div></div>
   </div>
-  <div class="note">Simulated interface. The signal is synthesized from epoch_features (not real EEG). Cursor positions are reconstructed from logged dwell/mouse_path events and tool-call targets. Top strip: working hypnogram (YASA labels, replaced by the annotator's labels as they are set; ⚑ = flagged, ✓ = done).</div>`;
+  <div class="note">Simulated interface on ${hasReal(R.n) ? 'real BOAS PSG signal (display copy)' : 'a synthetic signal rendered from epoch_features'}; the annotator, speech and actions are simulated. Cursor positions are reconstructed from logged dwell/mouse_path events and tool-call targets. Top strip: working hypnogram (YASA labels, replaced by the annotator's labels as they are set; ⚑ = flagged, ✓ = done).</div>`;
   $('#rpPlay').onclick = () => R.playing ? rpPause() : rpPlay();
   $('#rpSpeed').onchange = e => R.speed = +e.target.value;
   $('#rpCompress').onchange = e => R.compress = e.target.checked;

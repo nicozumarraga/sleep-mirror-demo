@@ -1,8 +1,9 @@
-# Sleep-Mirror synthetic study — data spec
+# Sleep-Mirror demo — data spec
 
-Synthetic stand-in for what Stage 2 of the Project Mirror study (think-aloud annotation) would produce,
-built on top of the BOAS dataset (OpenNeuro ds005555, CC0). Everything here is **simulated**; no real
-signals or real participants. All randomness is seeded (`SEED=42`) so the dataset is reproducible.
+A mock of what Stage 2 of the Project Mirror study (think-aloud annotation) will produce. The **nights are real**
+(20 PSG recordings from BOAS, OpenNeuro ds005555, CC0: signals, consensus labels, real YASA pre-scoring); the
+**annotation sessions are simulated** (annotators, speech, tool calls, labels). Simulation randomness is seeded
+(`SEED=42`), so rerunning the pipeline reproduces the data.
 
 ## Study design (demo scale)
 
@@ -22,13 +23,16 @@ the string labels `W N1 N2 N3 R` and `DISC` (disconnection) for readability; `st
 
 ```
 data/
-  dataset/                          # stand-in for the BOAS files we use
-    participants.tsv                # participant_id age sex bmi pid ahi_group
-    nights.json                     # per-night metadata (n_epochs, lights_off, role shared/unique)
+  dataset/                          # 20 real BOAS nights (scripts/prepare_boas.py)
+    selection.json                  # which BOAS recordings (unique participants, full channel set) + shared nights
+    participants.tsv                # BOAS participants.tsv rows: participant_id age sex bmi pid
+    nights.json                     # per-night metadata (n_epochs, hours, age, sex, n_flagged, yasa_acc, stage_ai_acc, role)
     sub-<N>/
-      sub-<N>_task-Sleep_acq-psg_events.tsv   # BOAS format: onset duration begsample endsample offset stage_hum stage_ai
-      sub-<N>_epoch_features.tsv    # simulated per-epoch signal descriptors (what the signal "looks like")
-      sub-<N>_yasa.tsv              # YASA pre-scoring: epoch yasa_stage p_W p_N1 p_N2 p_N3 p_R confidence flagged
+      sub-<N>_task-Sleep_acq-psg_events.tsv   # original BOAS file: onset duration begsample endsample offset stage_hum stage_ai
+      sub-<N>_yasa.tsv              # real YASA SleepStaging (C4/EOG/EMG + age/sex): epoch yasa_stage p_W p_N1 p_N2 p_N3 p_R confidence flagged
+      sub-<N>_epoch_features.tsv    # per-epoch descriptors computed from the real signal (below)
+      sub-<N>_detections.json       # YASA detections: spindles [[start_s, dur_s, ch]], slow_waves [[...]], rems [peak_s]
+      sub-<N>_signal.json / .bin.gz # display copy of the PSG (below)
   study/
     annotators.json                 # personas (see below) — ground truth for simulation, NOT shipped to model
     assignment.json                 # {ann-01: [sub-..], ...}, shared nights list
@@ -39,26 +43,36 @@ data/
                                     #   duration_s, kappa_vs_consensus, acc_flagged, acc_all}] — viewer entry point
 ```
 
-Regenerate everything: `python3 scripts/gen_nights.py && python3 scripts/gen_trajectories.py`.
+Regenerate everything: `./scripts/build_all.sh` (downloads ~3.8 GB of EDFs into `raw/`, git-ignored).
 View: `python3 -m http.server 8000` from `demo/`, open http://localhost:8000/viewer/
 
 ### `sub-<N>_epoch_features.tsv` columns
-`epoch onset_s stage_true` then descriptors (all floats unless noted):
-- `rel_delta rel_theta rel_alpha rel_sigma rel_beta` — relative EEG band power (sum≈1)
-- `slow_wave_pct` — % of epoch with ≥75 µV 0.5–2 Hz waves (N3 if ≥20)
-- `spindles` (int), `k_complexes` (int), `vertex_waves` (int), `sawtooth` (0/1)
-- `rem_count` (int, rapid eye movements), `sem` (0/1, slow eye movements)
-- `emg_rms` (µV)
-- `arousal` (0/1, ≥3 s abrupt frequency shift inside the epoch), `arousal_onset_s` (sec into epoch or blank)
-- `artifact` — `none|movement|electrode_pop|sweat|ecg|disconnect`
-- `artifact_channels` — comma list of affected channels, e.g. `PSG_C4,PSG_O2`
-- `difficulty` — 0..1 latent ambiguity (transitions, artifacts, mixed features)
+`epoch onset_s stage_true` then descriptors computed from the real signal at 100 Hz (no hypnogram used, so no
+label leakage, except `difficulty`). [D] = YASA detector, [H] = simple heuristic (not validated scoring):
+- `rel_delta rel_theta rel_alpha rel_sigma rel_beta` — relative band power on PSG_C4 (Welch, 0.5–30 Hz)
+- `slow_wave_pct` [D] — % of epoch covered by YASA-detected slow waves on C4 (`yasa.sw_detect`)
+- `spindles` [D] — YASA spindles on C4 (`yasa.spindles_detect`)
+- `k_complexes` [H] — isolated detected slow waves (1–2 in an epoch with <20% slow-wave time)
+- `vertex_waves` [H] — sharp 2–6 Hz deflections on C4 in epochs without slow-wave activity
+- `rem_count` [D] — `yasa.rem_detect` on the bipolar EOG (LOC=EOG, ROC=−EOG); also catches blinks in wake
+- `sem` [H], `sawtooth` [H] — slow eye movements (0.2–0.6 Hz EOG) / theta bursts with low EMG and REMs
+- `emg_rms` — chin EMG RMS after a 10 Hz high-pass (µV; absolute level varies a lot between recordings)
+- `arousal` [H], `arousal_onset_s` — ≥3 s of 8–30 Hz power ≥3× the preceding 10 s
+- `artifact` [H] — `none|movement|electrode_pop|sweat|disconnect` (disconnect = BOAS stage 8), `artifact_channels`
+- `difficulty` — simulator latent: 0.65·(1−YASA conf) + transition + artifact + arousal + N1 terms (uses consensus)
+
+### Signal display copy (`sub-<N>_signal.json` + `.bin.gz`)
+Full night; EEG/EOG band-passed 0.3–22 Hz at 50 Hz, chin EMG high-passed 10 Hz at 100 Hz, respiration
+low-passed 2 Hz at 10 Hz and z-scored (a.u.). Each (epoch, channel) row is 8-bit µ-law with its own scale:
+`x = sign(q)·((1+μ)^(|q|/127) − 1)/μ · scale[epoch][channel]`, μ = 255. Bytes are epoch-major, then channel
+order as in `channels`. This copy is for viewing only; use the EDFs for analysis. If EOGL/EOGR were recorded,
+`PSG_EOG` = EOGL − EOGR.
 
 `stage_true` == consensus (`stage_hum`). There are no individual BOAS scorer labels (the dataset only
 publishes the consensus), so annotator agreement is measured against `stage_hum`.
 
 ### Channels (BOAS PSG names)
-`PSG_F3 PSG_F4 PSG_C3 PSG_C4 PSG_O1 PSG_O2 PSG_EOG PSG_EMG PSG_THER PSG_THOR PSG_ABD`, 256 Hz.
+`PSG_F3 PSG_F4 PSG_C3 PSG_C4 PSG_O1 PSG_O2 PSG_EOG PSG_EMG PSG_THER PSG_THOR PSG_ABD`, 256 Hz in the EDFs.
 
 ## Trajectory event log (`session-<k>.jsonl`)
 
@@ -82,7 +96,7 @@ One JSON object per line, sorted by `t`. Common fields: `t` (seconds since sessi
 - `toggle_channel {channel, visible}`
 - `set_scale {channel|"all", uv_per_div}`
 - `apply_filter {channel, kind: lowpass|highpass|notch, hz}`
-- `measure {channel, t0_s, t1_s}` → result `{peak_to_peak_uv, duration_s, dominant_hz}`
+- `measure {channel, t0_s, t1_s}` → result `{peak_to_peak_uv, duration_s, dominant_hz}` (computed from the real signal, `scripts/ground_measurements.py`)
 - `show_hypnogram {visible}` / `show_spectrogram {visible, channel}`
 - `set_label {epoch, stage}` → result `{prev_stage, source_prev: yasa|human}`
 - `mark_event {kind: arousal|artifact|movement, epoch, onset_s, duration_s, channel?}`

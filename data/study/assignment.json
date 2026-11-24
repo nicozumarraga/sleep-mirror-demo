@@ -1,52 +1,52 @@
 {
  "shared_nights": [
-  "sub-7",
-  "sub-41",
-  "sub-88"
+  "sub-16",
+  "sub-40",
+  "sub-119"
  ],
  "flag_threshold": 0.6,
  "assignment": {
   "ann-01": [
-   "sub-7",
-   "sub-41",
-   "sub-88",
-   "sub-21",
-   "sub-52",
-   "sub-69",
-   "sub-117"
+   "sub-16",
+   "sub-40",
+   "sub-119",
+   "sub-29",
+   "sub-30",
+   "sub-31",
+   "sub-53"
   ],
   "ann-02": [
-   "sub-7",
-   "sub-41",
-   "sub-88",
-   "sub-33",
-   "sub-58",
-   "sub-81",
-   "sub-94"
+   "sub-16",
+   "sub-40",
+   "sub-119",
+   "sub-47",
+   "sub-115",
+   "sub-121",
+   "sub-125"
   ],
   "ann-03": [
-   "sub-7",
-   "sub-41",
-   "sub-88",
-   "sub-12",
-   "sub-26",
-   "sub-38"
+   "sub-16",
+   "sub-40",
+   "sub-119",
+   "sub-9",
+   "sub-19",
+   "sub-42"
   ],
   "ann-04": [
-   "sub-7",
-   "sub-41",
-   "sub-88",
-   "sub-3",
-   "sub-64",
-   "sub-75"
+   "sub-16",
+   "sub-40",
+   "sub-119",
+   "sub-28",
+   "sub-110",
+   "sub-127"
   ],
   "ann-05": [
+   "sub-16",
+   "sub-40",
+   "sub-119",
    "sub-7",
-   "sub-41",
-   "sub-88",
-   "sub-18",
-   "sub-47",
-   "sub-103"
+   "sub-26",
+   "sub-104"
   ]
  }
 }

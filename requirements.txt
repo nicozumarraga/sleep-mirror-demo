@@ -1,0 +1,5 @@
+mne>=1.6
+yasa>=0.6.5
+numpy
+scipy
+pandas

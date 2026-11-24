@@ -1,618 +1,618 @@
 [
  {
   "annotator": "ann-01",
-  "night": "sub-7",
+  "night": "sub-16",
   "role": "shared",
   "sessions": [
-   "sessions/ann-01/sub-7/session-1.jsonl",
-   "sessions/ann-01/sub-7/session-2.jsonl"
+   "sessions/ann-01/sub-16/session-1.jsonl"
   ],
-  "n_flagged": 151,
-  "n_labels": 184,
-  "duration_s": 6917.0,
-  "kappa_vs_consensus": 0.8171,
-  "acc_flagged": 0.7324,
-  "acc_all": 0.9019,
-  "yasa_kappa": 0.6801,
-  "yasa_acc_flagged": 0.4718,
-  "n_sessions": 2,
-  "n_utterances": 708,
-  "n_tool_calls": 746
+  "n_flagged": 81,
+  "n_labels": 142,
+  "duration_s": 5438.3,
+  "kappa_vs_consensus": 0.8673,
+  "acc_flagged": 0.8642,
+  "acc_all": 0.9218,
+  "yasa_kappa": 0.7553,
+  "yasa_acc_flagged": 0.5926,
+  "n_sessions": 1,
+  "n_utterances": 532,
+  "n_tool_calls": 635
  },
  {
   "annotator": "ann-01",
-  "night": "sub-41",
+  "night": "sub-40",
   "role": "shared",
   "sessions": [
-   "sessions/ann-01/sub-41/session-1.jsonl"
+   "sessions/ann-01/sub-40/session-1.jsonl"
   ],
-  "n_flagged": 134,
-  "n_labels": 166,
-  "duration_s": 6667.0,
-  "kappa_vs_consensus": 0.8597,
-  "acc_flagged": 0.7288,
-  "acc_all": 0.9134,
-  "yasa_kappa": 0.7461,
-  "yasa_acc_flagged": 0.4915,
+  "n_flagged": 103,
+  "n_labels": 133,
+  "duration_s": 5132.6,
+  "kappa_vs_consensus": 0.8823,
+  "acc_flagged": 0.8544,
+  "acc_all": 0.9233,
+  "yasa_kappa": 0.7695,
+  "yasa_acc_flagged": 0.5049,
   "n_sessions": 1,
-  "n_utterances": 625,
-  "n_tool_calls": 695
+  "n_utterances": 409,
+  "n_tool_calls": 511
  },
  {
   "annotator": "ann-01",
-  "night": "sub-88",
+  "night": "sub-119",
   "role": "shared",
   "sessions": [
-   "sessions/ann-01/sub-88/session-1.jsonl"
+   "sessions/ann-01/sub-119/session-1.jsonl",
+   "sessions/ann-01/sub-119/session-2.jsonl"
   ],
-  "n_flagged": 143,
-  "n_labels": 178,
-  "duration_s": 5840.8,
-  "kappa_vs_consensus": 0.8472,
-  "acc_flagged": 0.6746,
-  "acc_all": 0.9045,
-  "yasa_kappa": 0.7267,
-  "yasa_acc_flagged": 0.3968,
-  "n_sessions": 1,
-  "n_utterances": 588,
-  "n_tool_calls": 715
- },
- {
-  "annotator": "ann-01",
-  "night": "sub-21",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-01/sub-21/session-1.jsonl"
-  ],
-  "n_flagged": 148,
-  "n_labels": 182,
-  "duration_s": 5504.1,
-  "kappa_vs_consensus": 0.8786,
-  "acc_flagged": 0.7576,
-  "acc_all": 0.929,
-  "yasa_kappa": 0.7598,
-  "yasa_acc_flagged": 0.5152,
-  "n_sessions": 1,
-  "n_utterances": 623,
-  "n_tool_calls": 711
- },
- {
-  "annotator": "ann-01",
-  "night": "sub-52",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-01/sub-52/session-1.jsonl",
-   "sessions/ann-01/sub-52/session-2.jsonl"
-  ],
-  "n_flagged": 267,
-  "n_labels": 311,
-  "duration_s": 9693.3,
-  "kappa_vs_consensus": 0.795,
-  "acc_flagged": 0.728,
-  "acc_all": 0.8682,
-  "yasa_kappa": 0.6345,
-  "yasa_acc_flagged": 0.496,
+  "n_flagged": 128,
+  "n_labels": 230,
+  "duration_s": 7594.5,
+  "kappa_vs_consensus": 0.6943,
+  "acc_flagged": 0.8203,
+  "acc_all": 0.8207,
+  "yasa_kappa": 0.5162,
+  "yasa_acc_flagged": 0.5469,
   "n_sessions": 2,
-  "n_utterances": 1037,
-  "n_tool_calls": 1219
+  "n_utterances": 686,
+  "n_tool_calls": 867
  },
  {
   "annotator": "ann-01",
-  "night": "sub-69",
+  "night": "sub-29",
   "role": "unique",
   "sessions": [
-   "sessions/ann-01/sub-69/session-1.jsonl",
-   "sessions/ann-01/sub-69/session-2.jsonl"
+   "sessions/ann-01/sub-29/session-1.jsonl"
   ],
-  "n_flagged": 133,
-  "n_labels": 174,
-  "duration_s": 6357.9,
-  "kappa_vs_consensus": 0.8388,
-  "acc_flagged": 0.6299,
-  "acc_all": 0.8987,
-  "yasa_kappa": 0.7309,
-  "yasa_acc_flagged": 0.4488,
-  "n_sessions": 2,
-  "n_utterances": 641,
-  "n_tool_calls": 707
- },
- {
-  "annotator": "ann-01",
-  "night": "sub-117",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-01/sub-117/session-1.jsonl"
-  ],
-  "n_flagged": 153,
-  "n_labels": 181,
-  "duration_s": 6372.2,
-  "kappa_vs_consensus": 0.8509,
-  "acc_flagged": 0.7847,
-  "acc_all": 0.9107,
-  "yasa_kappa": 0.7304,
-  "yasa_acc_flagged": 0.5,
+  "n_flagged": 110,
+  "n_labels": 153,
+  "duration_s": 5518.9,
+  "kappa_vs_consensus": 0.8725,
+  "acc_flagged": 0.8273,
+  "acc_all": 0.9224,
+  "yasa_kappa": 0.7749,
+  "yasa_acc_flagged": 0.5455,
   "n_sessions": 1,
-  "n_utterances": 707,
-  "n_tool_calls": 747
+  "n_utterances": 597,
+  "n_tool_calls": 612
+ },
+ {
+  "annotator": "ann-01",
+  "night": "sub-30",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-01/sub-30/session-1.jsonl",
+   "sessions/ann-01/sub-30/session-2.jsonl"
+  ],
+  "n_flagged": 188,
+  "n_labels": 255,
+  "duration_s": 7469.6,
+  "kappa_vs_consensus": 0.7185,
+  "acc_flagged": 0.766,
+  "acc_all": 0.8429,
+  "yasa_kappa": 0.5337,
+  "yasa_acc_flagged": 0.4947,
+  "n_sessions": 2,
+  "n_utterances": 734,
+  "n_tool_calls": 926
+ },
+ {
+  "annotator": "ann-01",
+  "night": "sub-31",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-01/sub-31/session-1.jsonl"
+  ],
+  "n_flagged": 61,
+  "n_labels": 118,
+  "duration_s": 3699.8,
+  "kappa_vs_consensus": 0.8287,
+  "acc_flagged": 0.8525,
+  "acc_all": 0.9082,
+  "yasa_kappa": 0.681,
+  "yasa_acc_flagged": 0.3607,
+  "n_sessions": 1,
+  "n_utterances": 355,
+  "n_tool_calls": 492
+ },
+ {
+  "annotator": "ann-01",
+  "night": "sub-53",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-01/sub-53/session-1.jsonl"
+  ],
+  "n_flagged": 74,
+  "n_labels": 113,
+  "duration_s": 3949.4,
+  "kappa_vs_consensus": 0.8403,
+  "acc_flagged": 0.6757,
+  "acc_all": 0.9011,
+  "yasa_kappa": 0.7232,
+  "yasa_acc_flagged": 0.4595,
+  "n_sessions": 1,
+  "n_utterances": 417,
+  "n_tool_calls": 489
  },
  {
   "annotator": "ann-02",
-  "night": "sub-7",
+  "night": "sub-16",
   "role": "shared",
   "sessions": [
-   "sessions/ann-02/sub-7/session-1.jsonl"
+   "sessions/ann-02/sub-16/session-1.jsonl"
   ],
-  "n_flagged": 151,
-  "n_labels": 162,
-  "duration_s": 2500.8,
-  "kappa_vs_consensus": 0.7705,
-  "acc_flagged": 0.7183,
-  "acc_all": 0.875,
-  "yasa_kappa": 0.6801,
-  "yasa_acc_flagged": 0.4718,
+  "n_flagged": 81,
+  "n_labels": 94,
+  "duration_s": 1160.1,
+  "kappa_vs_consensus": 0.7915,
+  "acc_flagged": 0.7531,
+  "acc_all": 0.871,
+  "yasa_kappa": 0.7553,
+  "yasa_acc_flagged": 0.5926,
   "n_sessions": 1,
-  "n_utterances": 263,
+  "n_utterances": 126,
+  "n_tool_calls": 255
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-40",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-02/sub-40/session-1.jsonl"
+  ],
+  "n_flagged": 103,
+  "n_labels": 114,
+  "duration_s": 1513.4,
+  "kappa_vs_consensus": 0.8316,
+  "acc_flagged": 0.7573,
+  "acc_all": 0.8879,
+  "yasa_kappa": 0.7695,
+  "yasa_acc_flagged": 0.5049,
+  "n_sessions": 1,
+  "n_utterances": 140,
+  "n_tool_calls": 297
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-119",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-02/sub-119/session-1.jsonl"
+  ],
+  "n_flagged": 128,
+  "n_labels": 156,
+  "duration_s": 1941.5,
+  "kappa_vs_consensus": 0.5859,
+  "acc_flagged": 0.7656,
+  "acc_all": 0.735,
+  "yasa_kappa": 0.5162,
+  "yasa_acc_flagged": 0.5469,
+  "n_sessions": 1,
+  "n_utterances": 215,
   "n_tool_calls": 400
  },
  {
   "annotator": "ann-02",
-  "night": "sub-41",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-02/sub-41/session-1.jsonl"
-  ],
-  "n_flagged": 134,
-  "n_labels": 141,
-  "duration_s": 2085.4,
-  "kappa_vs_consensus": 0.8003,
-  "acc_flagged": 0.678,
-  "acc_all": 0.8761,
-  "yasa_kappa": 0.7461,
-  "yasa_acc_flagged": 0.4915,
-  "n_sessions": 1,
-  "n_utterances": 159,
-  "n_tool_calls": 338
- },
- {
-  "annotator": "ann-02",
-  "night": "sub-88",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-02/sub-88/session-1.jsonl"
-  ],
-  "n_flagged": 143,
-  "n_labels": 154,
-  "duration_s": 2009.2,
-  "kappa_vs_consensus": 0.7928,
-  "acc_flagged": 0.619,
-  "acc_all": 0.8693,
-  "yasa_kappa": 0.7267,
-  "yasa_acc_flagged": 0.3968,
-  "n_sessions": 1,
-  "n_utterances": 193,
-  "n_tool_calls": 373
- },
- {
-  "annotator": "ann-02",
-  "night": "sub-33",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-02/sub-33/session-1.jsonl"
-  ],
-  "n_flagged": 127,
-  "n_labels": 138,
-  "duration_s": 2066.3,
-  "kappa_vs_consensus": 0.8145,
-  "acc_flagged": 0.7087,
-  "acc_all": 0.8882,
-  "yasa_kappa": 0.7618,
-  "yasa_acc_flagged": 0.5354,
-  "n_sessions": 1,
-  "n_utterances": 214,
-  "n_tool_calls": 350
- },
- {
-  "annotator": "ann-02",
-  "night": "sub-58",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-02/sub-58/session-1.jsonl"
-  ],
-  "n_flagged": 247,
-  "n_labels": 262,
-  "duration_s": 4324.2,
-  "kappa_vs_consensus": 0.7528,
-  "acc_flagged": 0.7384,
-  "acc_all": 0.8408,
-  "yasa_kappa": 0.6402,
-  "yasa_acc_flagged": 0.4979,
-  "n_sessions": 1,
-  "n_utterances": 363,
-  "n_tool_calls": 625
- },
- {
-  "annotator": "ann-02",
-  "night": "sub-81",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-02/sub-81/session-1.jsonl"
-  ],
-  "n_flagged": 242,
-  "n_labels": 256,
-  "duration_s": 4019.7,
-  "kappa_vs_consensus": 0.7283,
-  "acc_flagged": 0.7107,
-  "acc_all": 0.8258,
-  "yasa_kappa": 0.652,
-  "yasa_acc_flagged": 0.5455,
-  "n_sessions": 1,
-  "n_utterances": 403,
-  "n_tool_calls": 664
- },
- {
-  "annotator": "ann-02",
-  "night": "sub-94",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-02/sub-94/session-1.jsonl"
-  ],
-  "n_flagged": 135,
-  "n_labels": 144,
-  "duration_s": 2004.6,
-  "kappa_vs_consensus": 0.8241,
-  "acc_flagged": 0.7037,
-  "acc_all": 0.8929,
-  "yasa_kappa": 0.7444,
-  "yasa_acc_flagged": 0.4222,
-  "n_sessions": 1,
-  "n_utterances": 227,
-  "n_tool_calls": 377
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-7",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-03/sub-7/session-1.jsonl",
-   "sessions/ann-03/sub-7/session-2.jsonl"
-  ],
-  "n_flagged": 151,
-  "n_labels": 190,
-  "duration_s": 6113.9,
-  "kappa_vs_consensus": 0.8475,
-  "acc_flagged": 0.8239,
-  "acc_all": 0.9182,
-  "yasa_kappa": 0.6801,
-  "yasa_acc_flagged": 0.4718,
-  "n_sessions": 2,
-  "n_utterances": 629,
-  "n_tool_calls": 891
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-41",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-03/sub-41/session-1.jsonl",
-   "sessions/ann-03/sub-41/session-2.jsonl"
-  ],
-  "n_flagged": 134,
-  "n_labels": 172,
-  "duration_s": 7687.9,
-  "kappa_vs_consensus": 0.8823,
-  "acc_flagged": 0.8136,
-  "acc_all": 0.9278,
-  "yasa_kappa": 0.7461,
-  "yasa_acc_flagged": 0.4915,
-  "n_sessions": 2,
-  "n_utterances": 629,
-  "n_tool_calls": 834
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-88",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-03/sub-88/session-1.jsonl"
-  ],
-  "n_flagged": 143,
-  "n_labels": 181,
-  "duration_s": 6633.5,
-  "kappa_vs_consensus": 0.8773,
-  "acc_flagged": 0.7937,
-  "acc_all": 0.9227,
-  "yasa_kappa": 0.7267,
-  "yasa_acc_flagged": 0.3968,
-  "n_sessions": 1,
-  "n_utterances": 614,
-  "n_tool_calls": 880
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-12",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-03/sub-12/session-1.jsonl",
-   "sessions/ann-03/sub-12/session-2.jsonl"
-  ],
-  "n_flagged": 145,
-  "n_labels": 196,
-  "duration_s": 6292.5,
-  "kappa_vs_consensus": 0.869,
-  "acc_flagged": 0.7984,
-  "acc_all": 0.9206,
-  "yasa_kappa": 0.743,
-  "yasa_acc_flagged": 0.5659,
-  "n_sessions": 2,
-  "n_utterances": 646,
-  "n_tool_calls": 922
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-26",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-03/sub-26/session-1.jsonl",
-   "sessions/ann-03/sub-26/session-2.jsonl"
-  ],
-  "n_flagged": 125,
-  "n_labels": 169,
-  "duration_s": 7286.6,
-  "kappa_vs_consensus": 0.873,
-  "acc_flagged": 0.752,
-  "acc_all": 0.9223,
-  "yasa_kappa": 0.7524,
-  "yasa_acc_flagged": 0.48,
-  "n_sessions": 2,
-  "n_utterances": 621,
-  "n_tool_calls": 843
- },
- {
-  "annotator": "ann-03",
-  "night": "sub-38",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-03/sub-38/session-1.jsonl",
-   "sessions/ann-03/sub-38/session-2.jsonl"
-  ],
-  "n_flagged": 157,
-  "n_labels": 207,
-  "duration_s": 7967.0,
-  "kappa_vs_consensus": 0.8543,
-  "acc_flagged": 0.7389,
-  "acc_all": 0.9077,
-  "yasa_kappa": 0.7262,
-  "yasa_acc_flagged": 0.4904,
-  "n_sessions": 2,
-  "n_utterances": 735,
-  "n_tool_calls": 1022
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-7",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-04/sub-7/session-1.jsonl"
-  ],
-  "n_flagged": 151,
-  "n_labels": 167,
-  "duration_s": 5325.8,
-  "kappa_vs_consensus": 0.795,
-  "acc_flagged": 0.7676,
-  "acc_all": 0.889,
-  "yasa_kappa": 0.6801,
-  "yasa_acc_flagged": 0.4718,
-  "n_sessions": 1,
-  "n_utterances": 504,
-  "n_tool_calls": 589
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-41",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-04/sub-41/session-1.jsonl"
-  ],
-  "n_flagged": 134,
-  "n_labels": 147,
-  "duration_s": 4614.3,
-  "kappa_vs_consensus": 0.8112,
-  "acc_flagged": 0.678,
-  "acc_all": 0.8821,
-  "yasa_kappa": 0.7461,
-  "yasa_acc_flagged": 0.4915,
-  "n_sessions": 1,
-  "n_utterances": 418,
-  "n_tool_calls": 551
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-88",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-04/sub-88/session-1.jsonl"
-  ],
-  "n_flagged": 143,
-  "n_labels": 151,
-  "duration_s": 4602.3,
-  "kappa_vs_consensus": 0.7879,
-  "acc_flagged": 0.619,
-  "acc_all": 0.8659,
-  "yasa_kappa": 0.7267,
-  "yasa_acc_flagged": 0.3968,
-  "n_sessions": 1,
-  "n_utterances": 461,
-  "n_tool_calls": 552
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-3",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-04/sub-3/session-1.jsonl"
-  ],
-  "n_flagged": 103,
-  "n_labels": 120,
-  "duration_s": 3955.9,
-  "kappa_vs_consensus": 0.7906,
-  "acc_flagged": 0.6505,
-  "acc_all": 0.8785,
-  "yasa_kappa": 0.7469,
-  "yasa_acc_flagged": 0.5534,
-  "n_sessions": 1,
-  "n_utterances": 349,
-  "n_tool_calls": 443
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-64",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-04/sub-64/session-1.jsonl"
-  ],
-  "n_flagged": 141,
-  "n_labels": 164,
-  "duration_s": 5317.3,
-  "kappa_vs_consensus": 0.8116,
-  "acc_flagged": 0.7234,
-  "acc_all": 0.8866,
-  "yasa_kappa": 0.7314,
-  "yasa_acc_flagged": 0.5461,
-  "n_sessions": 1,
-  "n_utterances": 515,
-  "n_tool_calls": 619
- },
- {
-  "annotator": "ann-04",
-  "night": "sub-75",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-04/sub-75/session-1.jsonl"
-  ],
-  "n_flagged": 127,
-  "n_labels": 143,
-  "duration_s": 4511.9,
-  "kappa_vs_consensus": 0.8056,
-  "acc_flagged": 0.7323,
-  "acc_all": 0.882,
-  "yasa_kappa": 0.7205,
-  "yasa_acc_flagged": 0.4724,
-  "n_sessions": 1,
-  "n_utterances": 503,
-  "n_tool_calls": 577
- },
- {
-  "annotator": "ann-05",
-  "night": "sub-7",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-05/sub-7/session-1.jsonl"
-  ],
-  "n_flagged": 151,
-  "n_labels": 176,
-  "duration_s": 4222.1,
-  "kappa_vs_consensus": 0.7767,
-  "acc_flagged": 0.669,
-  "acc_all": 0.8785,
-  "yasa_kappa": 0.6801,
-  "yasa_acc_flagged": 0.4718,
-  "n_sessions": 1,
-  "n_utterances": 543,
-  "n_tool_calls": 610
- },
- {
-  "annotator": "ann-05",
-  "night": "sub-41",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-05/sub-41/session-1.jsonl"
-  ],
-  "n_flagged": 134,
-  "n_labels": 157,
-  "duration_s": 4035.3,
-  "kappa_vs_consensus": 0.8268,
-  "acc_flagged": 0.6864,
-  "acc_all": 0.8929,
-  "yasa_kappa": 0.7461,
-  "yasa_acc_flagged": 0.4915,
-  "n_sessions": 1,
-  "n_utterances": 528,
-  "n_tool_calls": 552
- },
- {
-  "annotator": "ann-05",
-  "night": "sub-88",
-  "role": "shared",
-  "sessions": [
-   "sessions/ann-05/sub-88/session-1.jsonl"
-  ],
-  "n_flagged": 143,
-  "n_labels": 175,
-  "duration_s": 5326.0,
-  "kappa_vs_consensus": 0.8751,
-  "acc_flagged": 0.8095,
-  "acc_all": 0.9216,
-  "yasa_kappa": 0.7267,
-  "yasa_acc_flagged": 0.3968,
-  "n_sessions": 1,
-  "n_utterances": 580,
-  "n_tool_calls": 634
- },
- {
-  "annotator": "ann-05",
-  "night": "sub-18",
-  "role": "unique",
-  "sessions": [
-   "sessions/ann-05/sub-18/session-1.jsonl"
-  ],
-  "n_flagged": 166,
-  "n_labels": 189,
-  "duration_s": 5929.5,
-  "kappa_vs_consensus": 0.7995,
-  "acc_flagged": 0.6433,
-  "acc_all": 0.8757,
-  "yasa_kappa": 0.7093,
-  "yasa_acc_flagged": 0.4459,
-  "n_sessions": 1,
-  "n_utterances": 636,
-  "n_tool_calls": 691
- },
- {
-  "annotator": "ann-05",
   "night": "sub-47",
   "role": "unique",
   "sessions": [
-   "sessions/ann-05/sub-47/session-1.jsonl"
+   "sessions/ann-02/sub-47/session-1.jsonl"
   ],
-  "n_flagged": 131,
-  "n_labels": 159,
-  "duration_s": 3965.2,
-  "kappa_vs_consensus": 0.8235,
-  "acc_flagged": 0.6695,
-  "acc_all": 0.8989,
-  "yasa_kappa": 0.7201,
-  "yasa_acc_flagged": 0.4237,
+  "n_flagged": 152,
+  "n_labels": 174,
+  "duration_s": 2754.9,
+  "kappa_vs_consensus": 0.6788,
+  "acc_flagged": 0.7566,
+  "acc_all": 0.811,
+  "yasa_kappa": 0.5716,
+  "yasa_acc_flagged": 0.4539,
   "n_sessions": 1,
-  "n_utterances": 476,
-  "n_tool_calls": 565
+  "n_utterances": 226,
+  "n_tool_calls": 430
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-115",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-02/sub-115/session-1.jsonl"
+  ],
+  "n_flagged": 207,
+  "n_labels": 218,
+  "duration_s": 3181.3,
+  "kappa_vs_consensus": 0.6888,
+  "acc_flagged": 0.6473,
+  "acc_all": 0.7981,
+  "yasa_kappa": 0.6212,
+  "yasa_acc_flagged": 0.5024,
+  "n_sessions": 1,
+  "n_utterances": 270,
+  "n_tool_calls": 521
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-121",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-02/sub-121/session-1.jsonl"
+  ],
+  "n_flagged": 214,
+  "n_labels": 248,
+  "duration_s": 3942.4,
+  "kappa_vs_consensus": 0.4582,
+  "acc_flagged": 0.6542,
+  "acc_all": 0.6417,
+  "yasa_kappa": 0.3179,
+  "yasa_acc_flagged": 0.3879,
+  "n_sessions": 1,
+  "n_utterances": 298,
+  "n_tool_calls": 611
+ },
+ {
+  "annotator": "ann-02",
+  "night": "sub-125",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-02/sub-125/session-1.jsonl"
+  ],
+  "n_flagged": 128,
+  "n_labels": 155,
+  "duration_s": 2252.8,
+  "kappa_vs_consensus": 0.6271,
+  "acc_flagged": 0.6953,
+  "acc_all": 0.7549,
+  "yasa_kappa": 0.5565,
+  "yasa_acc_flagged": 0.4531,
+  "n_sessions": 1,
+  "n_utterances": 212,
+  "n_tool_calls": 386
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-16",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-03/sub-16/session-1.jsonl",
+   "sessions/ann-03/sub-16/session-2.jsonl"
+  ],
+  "n_flagged": 81,
+  "n_labels": 156,
+  "duration_s": 4997.6,
+  "kappa_vs_consensus": 0.888,
+  "acc_flagged": 0.8148,
+  "acc_all": 0.9345,
+  "yasa_kappa": 0.7553,
+  "yasa_acc_flagged": 0.5926,
+  "n_sessions": 2,
+  "n_utterances": 503,
+  "n_tool_calls": 732
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-40",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-03/sub-40/session-1.jsonl",
+   "sessions/ann-03/sub-40/session-2.jsonl"
+  ],
+  "n_flagged": 103,
+  "n_labels": 150,
+  "duration_s": 5755.4,
+  "kappa_vs_consensus": 0.9239,
+  "acc_flagged": 0.9126,
+  "acc_all": 0.9513,
+  "yasa_kappa": 0.7695,
+  "yasa_acc_flagged": 0.5049,
+  "n_sessions": 2,
+  "n_utterances": 469,
+  "n_tool_calls": 673
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-119",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-03/sub-119/session-1.jsonl",
+   "sessions/ann-03/sub-119/session-2.jsonl",
+   "sessions/ann-03/sub-119/session-3.jsonl"
+  ],
+  "n_flagged": 128,
+  "n_labels": 249,
+  "duration_s": 8470.2,
+  "kappa_vs_consensus": 0.7388,
+  "acc_flagged": 0.8516,
+  "acc_all": 0.8508,
+  "yasa_kappa": 0.5162,
+  "yasa_acc_flagged": 0.5469,
+  "n_sessions": 3,
+  "n_utterances": 771,
+  "n_tool_calls": 1125
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-9",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-03/sub-9/session-1.jsonl"
+  ],
+  "n_flagged": 55,
+  "n_labels": 130,
+  "duration_s": 3925.1,
+  "kappa_vs_consensus": 0.8462,
+  "acc_flagged": 0.7636,
+  "acc_all": 0.8976,
+  "yasa_kappa": 0.7235,
+  "yasa_acc_flagged": 0.4364,
+  "n_sessions": 1,
+  "n_utterances": 367,
+  "n_tool_calls": 554
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-19",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-03/sub-19/session-1.jsonl"
+  ],
+  "n_flagged": 99,
+  "n_labels": 136,
+  "duration_s": 4944.2,
+  "kappa_vs_consensus": 0.9289,
+  "acc_flagged": 0.8283,
+  "acc_all": 0.9486,
+  "yasa_kappa": 0.8528,
+  "yasa_acc_flagged": 0.596,
+  "n_sessions": 1,
+  "n_utterances": 444,
+  "n_tool_calls": 592
+ },
+ {
+  "annotator": "ann-03",
+  "night": "sub-42",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-03/sub-42/session-1.jsonl"
+  ],
+  "n_flagged": 112,
+  "n_labels": 159,
+  "duration_s": 5779.6,
+  "kappa_vs_consensus": 0.8932,
+  "acc_flagged": 0.8393,
+  "acc_all": 0.9295,
+  "yasa_kappa": 0.7682,
+  "yasa_acc_flagged": 0.5,
+  "n_sessions": 1,
+  "n_utterances": 473,
+  "n_tool_calls": 690
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-16",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-04/sub-16/session-1.jsonl"
+  ],
+  "n_flagged": 81,
+  "n_labels": 99,
+  "duration_s": 2683.9,
+  "kappa_vs_consensus": 0.804,
+  "acc_flagged": 0.8148,
+  "acc_all": 0.8798,
+  "yasa_kappa": 0.7553,
+  "yasa_acc_flagged": 0.5926,
+  "n_sessions": 1,
+  "n_utterances": 275,
+  "n_tool_calls": 367
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-40",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-04/sub-40/session-1.jsonl"
+  ],
+  "n_flagged": 103,
+  "n_labels": 120,
+  "duration_s": 3833.6,
+  "kappa_vs_consensus": 0.8228,
+  "acc_flagged": 0.6699,
+  "acc_all": 0.8819,
+  "yasa_kappa": 0.7695,
+  "yasa_acc_flagged": 0.5049,
+  "n_sessions": 1,
+  "n_utterances": 332,
+  "n_tool_calls": 401
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-119",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-04/sub-119/session-1.jsonl",
+   "sessions/ann-04/sub-119/session-2.jsonl"
+  ],
+  "n_flagged": 128,
+  "n_labels": 164,
+  "duration_s": 5327.2,
+  "kappa_vs_consensus": 0.5866,
+  "acc_flagged": 0.7188,
+  "acc_all": 0.7361,
+  "yasa_kappa": 0.5162,
+  "yasa_acc_flagged": 0.5469,
+  "n_sessions": 2,
+  "n_utterances": 455,
+  "n_tool_calls": 585
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-28",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-04/sub-28/session-1.jsonl"
+  ],
+  "n_flagged": 64,
+  "n_labels": 92,
+  "duration_s": 2493.7,
+  "kappa_vs_consensus": 0.8525,
+  "acc_flagged": 0.7188,
+  "acc_all": 0.8999,
+  "yasa_kappa": 0.7928,
+  "yasa_acc_flagged": 0.5312,
+  "n_sessions": 1,
+  "n_utterances": 289,
+  "n_tool_calls": 343
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-110",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-04/sub-110/session-1.jsonl",
+   "sessions/ann-04/sub-110/session-2.jsonl"
+  ],
+  "n_flagged": 187,
+  "n_labels": 216,
+  "duration_s": 6848.6,
+  "kappa_vs_consensus": 0.563,
+  "acc_flagged": 0.6364,
+  "acc_all": 0.7324,
+  "yasa_kappa": 0.4808,
+  "yasa_acc_flagged": 0.4706,
+  "n_sessions": 2,
+  "n_utterances": 573,
+  "n_tool_calls": 794
+ },
+ {
+  "annotator": "ann-04",
+  "night": "sub-127",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-04/sub-127/session-1.jsonl"
+  ],
+  "n_flagged": 93,
+  "n_labels": 101,
+  "duration_s": 2971.2,
+  "kappa_vs_consensus": 0.8642,
+  "acc_flagged": 0.7957,
+  "acc_all": 0.9099,
+  "yasa_kappa": 0.8217,
+  "yasa_acc_flagged": 0.6022,
+  "n_sessions": 1,
+  "n_utterances": 296,
+  "n_tool_calls": 350
  },
  {
   "annotator": "ann-05",
-  "night": "sub-103",
+  "night": "sub-16",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-05/sub-16/session-1.jsonl"
+  ],
+  "n_flagged": 81,
+  "n_labels": 122,
+  "duration_s": 2955.9,
+  "kappa_vs_consensus": 0.83,
+  "acc_flagged": 0.7778,
+  "acc_all": 0.8974,
+  "yasa_kappa": 0.7553,
+  "yasa_acc_flagged": 0.5926,
+  "n_sessions": 1,
+  "n_utterances": 362,
+  "n_tool_calls": 459
+ },
+ {
+  "annotator": "ann-05",
+  "night": "sub-40",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-05/sub-40/session-1.jsonl"
+  ],
+  "n_flagged": 103,
+  "n_labels": 126,
+  "duration_s": 3245.5,
+  "kappa_vs_consensus": 0.8365,
+  "acc_flagged": 0.6699,
+  "acc_all": 0.8916,
+  "yasa_kappa": 0.7695,
+  "yasa_acc_flagged": 0.5049,
+  "n_sessions": 1,
+  "n_utterances": 335,
+  "n_tool_calls": 453
+ },
+ {
+  "annotator": "ann-05",
+  "night": "sub-119",
+  "role": "shared",
+  "sessions": [
+   "sessions/ann-05/sub-119/session-1.jsonl"
+  ],
+  "n_flagged": 128,
+  "n_labels": 196,
+  "duration_s": 5090.1,
+  "kappa_vs_consensus": 0.6263,
+  "acc_flagged": 0.7109,
+  "acc_all": 0.7695,
+  "yasa_kappa": 0.5162,
+  "yasa_acc_flagged": 0.5469,
+  "n_sessions": 1,
+  "n_utterances": 575,
+  "n_tool_calls": 705
+ },
+ {
+  "annotator": "ann-05",
+  "night": "sub-7",
   "role": "unique",
   "sessions": [
-   "sessions/ann-05/sub-103/session-1.jsonl"
+   "sessions/ann-05/sub-7/session-1.jsonl"
   ],
-  "n_flagged": 149,
-  "n_labels": 184,
-  "duration_s": 4567.5,
-  "kappa_vs_consensus": 0.7989,
-  "acc_flagged": 0.6715,
-  "acc_all": 0.8859,
-  "yasa_kappa": 0.7072,
-  "yasa_acc_flagged": 0.5255,
+  "n_flagged": 45,
+  "n_labels": 86,
+  "duration_s": 2467.5,
+  "kappa_vs_consensus": 0.8644,
+  "acc_flagged": 0.6889,
+  "acc_all": 0.9059,
+  "yasa_kappa": 0.8055,
+  "yasa_acc_flagged": 0.5778,
   "n_sessions": 1,
-  "n_utterances": 531,
-  "n_tool_calls": 654
+  "n_utterances": 262,
+  "n_tool_calls": 320
+ },
+ {
+  "annotator": "ann-05",
+  "night": "sub-26",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-05/sub-26/session-1.jsonl"
+  ],
+  "n_flagged": 88,
+  "n_labels": 113,
+  "duration_s": 3315.6,
+  "kappa_vs_consensus": 0.9105,
+  "acc_flagged": 0.7614,
+  "acc_all": 0.9372,
+  "yasa_kappa": 0.8558,
+  "yasa_acc_flagged": 0.5909,
+  "n_sessions": 1,
+  "n_utterances": 307,
+  "n_tool_calls": 431
+ },
+ {
+  "annotator": "ann-05",
+  "night": "sub-104",
+  "role": "unique",
+  "sessions": [
+   "sessions/ann-05/sub-104/session-1.jsonl"
+  ],
+  "n_flagged": 72,
+  "n_labels": 120,
+  "duration_s": 3251.9,
+  "kappa_vs_consensus": 0.7764,
+  "acc_flagged": 0.7361,
+  "acc_all": 0.8451,
+  "yasa_kappa": 0.6853,
+  "yasa_acc_flagged": 0.5278,
+  "n_sessions": 1,
+  "n_utterances": 388,
+  "n_tool_calls": 471
  }
 ]
