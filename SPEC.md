@@ -43,7 +43,7 @@ data/
                                     #   duration_s, kappa_vs_consensus, acc_flagged, acc_all}] — viewer entry point
 ```
 
-Regenerate everything: `./scripts/build_all.sh` (downloads ~3.8 GB of EDFs into `raw/`, git-ignored).
+Original EDFs: `./scripts/boas_download.sh` (~3.8 GB into `raw/`, git-ignored). The other scripts document how `data/` was generated.
 View: `python3 -m http.server 8000` from `demo/`, open http://localhost:8000/viewer/
 
 ### `sub-<N>_epoch_features.tsv` columns

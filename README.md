@@ -87,7 +87,7 @@ viewer/                  static viewer (vanilla JS)
 - all simulated sessions and annotations
 - a display copy of the signal (8-bit, downsampled)
 
-Treat these committed files as fixed.
+Use these as they are.
 
 **Download the original full-resolution signal** (EDF, 256 Hz) for any signal work:
 
@@ -96,11 +96,7 @@ Treat these committed files as fixed.
 ./scripts/boas_download.sh sub-16     # or just some nights
 ```
 
-**Optional: rebuild everything from the EDFs.** This **overwrites** the committed files, so only do it to audit or change the pipeline. Versions are pinned in `requirements.txt`.
-
-```bash
-./scripts/build_all.sh   # download → real YASA + features → simulate sessions → validate → export signal
-```
+The scripts in `scripts/` document how `data/` was generated: night selection, YASA, features, the session simulator and the signal export. They are there for provenance, and you don't need to run them.
 
 ## The open question
 
